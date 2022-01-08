@@ -7,12 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A7397133F404B44A463EB0 /* Pods_YanoljaCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F89168A098E9086E73BBB1 /* Pods_YanoljaCloneApp.framework */; };
 		32685E4527894AA3002389AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E4427894AA3002389AF /* AppDelegate.swift */; };
 		32685E4727894AA3002389AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E4627894AA3002389AF /* SceneDelegate.swift */; };
 		32685E4927894AA3002389AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E4827894AA3002389AF /* ViewController.swift */; };
 		32685E4C27894AA3002389AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32685E4A27894AA3002389AF /* Main.storyboard */; };
 		32685E4E27894AA4002389AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32685E4D27894AA4002389AF /* Assets.xcassets */; };
 		32685E5127894AA4002389AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32685E4F27894AA4002389AF /* LaunchScreen.storyboard */; };
+		32685E66278976F8002389AF /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E5C278976F7002389AF /* IndicatorView.swift */; };
+		32685E67278976F8002389AF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E5E278976F7002389AF /* Date.swift */; };
+		32685E68278976F8002389AF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E5F278976F7002389AF /* UIColor.swift */; };
+		32685E69278976F8002389AF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E60278976F8002389AF /* String.swift */; };
+		32685E6A278976F8002389AF /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E61278976F8002389AF /* UIButton.swift */; };
+		32685E6B278976F8002389AF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E62278976F8002389AF /* UIViewController.swift */; };
+		32685E6C278976F8002389AF /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E63278976F8002389AF /* UINavigationBar.swift */; };
+		32685E6D278976F8002389AF /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E64278976F8002389AF /* UIFont.swift */; };
+		32685E6E278976F8002389AF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E65278976F8002389AF /* Device.swift */; };
+		32685E7927897757002389AF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E7027897757002389AF /* Constant.swift */; };
+		32685E7A27897757002389AF /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E7227897757002389AF /* Key.swift */; };
+		32685E7B27897757002389AF /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32685E7427897757002389AF /* NotoSansCJKkr-Medium.otf */; };
+		32685E7C27897757002389AF /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32685E7527897757002389AF /* NotoSansCJKkr-Regular.otf */; };
+		32685E7D27897757002389AF /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32685E7627897757002389AF /* NotoSansCJKkr-Bold.otf */; };
+		32685E7E27897757002389AF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E7827897757002389AF /* BaseViewController.swift */; };
+		32685E8B2789791A002389AF /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32685E8A2789791A002389AF /* Signin.storyboard */; };
+		32685E8D27897927002389AF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32685E8C27897927002389AF /* Login.storyboard */; };
+		32685E8F2789D63B002389AF /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E8E2789D63B002389AF /* LoginMain.swift */; };
+		32685E912789D647002389AF /* LoginEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E902789D647002389AF /* LoginEmail.swift */; };
+		32685E932789EA60002389AF /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E922789EA60002389AF /* LoginDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +45,29 @@
 		32685E4D27894AA4002389AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32685E5027894AA4002389AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32685E5227894AA4002389AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32685E5C278976F7002389AF /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		32685E5E278976F7002389AF /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		32685E5F278976F7002389AF /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		32685E60278976F8002389AF /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		32685E61278976F8002389AF /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		32685E62278976F8002389AF /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		32685E63278976F8002389AF /* UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		32685E64278976F8002389AF /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		32685E65278976F8002389AF /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		32685E7027897757002389AF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		32685E7227897757002389AF /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		32685E7427897757002389AF /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		32685E7527897757002389AF /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		32685E7627897757002389AF /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		32685E7827897757002389AF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		32685E8A2789791A002389AF /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		32685E8C27897927002389AF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		32685E8E2789D63B002389AF /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
+		32685E902789D647002389AF /* LoginEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmail.swift; sourceTree = "<group>"; };
+		32685E922789EA60002389AF /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		B8DA0285D2BD6835B35698DC /* Pods-YanoljaCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YanoljaCloneApp.release.xcconfig"; path = "Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp.release.xcconfig"; sourceTree = "<group>"; };
+		C4F89168A098E9086E73BBB1 /* Pods_YanoljaCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YanoljaCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B341B05EF9DF4718DFB38C /* Pods-YanoljaCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YanoljaCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +75,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A7397133F404B44A463EB0 /* Pods_YanoljaCloneApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1512DBB00AFB7EAEE2E7390F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5B341B05EF9DF4718DFB38C /* Pods-YanoljaCloneApp.debug.xcconfig */,
+				B8DA0285D2BD6835B35698DC /* Pods-YanoljaCloneApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		32685E3827894AA2002389AF = {
 			isa = PBXGroup;
 			children = (
 				32685E4327894AA3002389AF /* YanoljaCloneApp */,
 				32685E4227894AA2002389AF /* Products */,
+				1512DBB00AFB7EAEE2E7390F /* Pods */,
+				5FC26B33292A3C979B326A4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +112,187 @@
 		32685E4327894AA3002389AF /* YanoljaCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				32685E6F27897757002389AF /* Configuration */,
+				32685E5B278976F7002389AF /* Util */,
+				32685E5A278976C6002389AF /* Source */,
 				32685E4427894AA3002389AF /* AppDelegate.swift */,
 				32685E4627894AA3002389AF /* SceneDelegate.swift */,
 				32685E4827894AA3002389AF /* ViewController.swift */,
-				32685E4A27894AA3002389AF /* Main.storyboard */,
 				32685E4D27894AA4002389AF /* Assets.xcassets */,
 				32685E4F27894AA4002389AF /* LaunchScreen.storyboard */,
 				32685E5227894AA4002389AF /* Info.plist */,
 			);
 			path = YanoljaCloneApp;
+			sourceTree = "<group>";
+		};
+		32685E5A278976C6002389AF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				32685E87278978CF002389AF /* Account */,
+				32685E8427897864002389AF /* Network */,
+				32685E4A27894AA3002389AF /* Main.storyboard */,
+				32685E832789783F002389AF /* MyPage */,
+				32685E8227897838002389AF /* Heart */,
+				32685E812789782A002389AF /* Peripheral */,
+				32685E802789781B002389AF /* Region */,
+				32685E7F27897815002389AF /* Home */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		32685E5B278976F7002389AF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				32685E5C278976F7002389AF /* IndicatorView.swift */,
+				32685E5D278976F7002389AF /* Extension */,
+				32685E65278976F8002389AF /* Device.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		32685E5D278976F7002389AF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				32685E5E278976F7002389AF /* Date.swift */,
+				32685E5F278976F7002389AF /* UIColor.swift */,
+				32685E60278976F8002389AF /* String.swift */,
+				32685E61278976F8002389AF /* UIButton.swift */,
+				32685E62278976F8002389AF /* UIViewController.swift */,
+				32685E63278976F8002389AF /* UINavigationBar.swift */,
+				32685E64278976F8002389AF /* UIFont.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		32685E6F27897757002389AF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				32685E7027897757002389AF /* Constant.swift */,
+				32685E7127897757002389AF /* Secret */,
+				32685E7327897757002389AF /* Font */,
+				32685E7727897757002389AF /* Base */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		32685E7127897757002389AF /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				32685E7227897757002389AF /* Key.swift */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		32685E7327897757002389AF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				32685E7427897757002389AF /* NotoSansCJKkr-Medium.otf */,
+				32685E7527897757002389AF /* NotoSansCJKkr-Regular.otf */,
+				32685E7627897757002389AF /* NotoSansCJKkr-Bold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		32685E7727897757002389AF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				32685E7827897757002389AF /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		32685E7F27897815002389AF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		32685E802789781B002389AF /* Region */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
+		32685E812789782A002389AF /* Peripheral */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Peripheral;
+			sourceTree = "<group>";
+		};
+		32685E8227897838002389AF /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
+		32685E832789783F002389AF /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		32685E8427897864002389AF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				32685E89278978F0002389AF /* Request */,
+				32685E88278978EA002389AF /* Entity */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		32685E852789786C002389AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				32685E8C27897927002389AF /* Login.storyboard */,
+				32685E8E2789D63B002389AF /* LoginMain.swift */,
+				32685E902789D647002389AF /* LoginEmail.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		32685E8627897899002389AF /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				32685E8A2789791A002389AF /* Signin.storyboard */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		32685E87278978CF002389AF /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				32685E852789786C002389AF /* Login */,
+				32685E8627897899002389AF /* Signin */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		32685E88278978EA002389AF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		32685E89278978F0002389AF /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				32685E922789EA60002389AF /* LoginDataManager.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5FC26B33292A3C979B326A4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4F89168A098E9086E73BBB1 /* Pods_YanoljaCloneApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32685E5527894AA4002389AF /* Build configuration list for PBXNativeTarget "YanoljaCloneApp" */;
 			buildPhases = (
+				3552F8E09DB64E4B197FF976 /* [CP] Check Pods Manifest.lock */,
 				32685E3D27894AA2002389AF /* Sources */,
 				32685E3E27894AA2002389AF /* Frameworks */,
 				32685E3F27894AA2002389AF /* Resources */,
+				E0D2594CC7A11297994D4173 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,13 +355,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32685E8D27897927002389AF /* Login.storyboard in Resources */,
+				32685E7C27897757002389AF /* NotoSansCJKkr-Regular.otf in Resources */,
 				32685E5127894AA4002389AF /* LaunchScreen.storyboard in Resources */,
+				32685E8B2789791A002389AF /* Signin.storyboard in Resources */,
 				32685E4E27894AA4002389AF /* Assets.xcassets in Resources */,
 				32685E4C27894AA3002389AF /* Main.storyboard in Resources */,
+				32685E7B27897757002389AF /* NotoSansCJKkr-Medium.otf in Resources */,
+				32685E7D27897757002389AF /* NotoSansCJKkr-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3552F8E09DB64E4B197FF976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YanoljaCloneApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D2594CC7A11297994D4173 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32685E3D27894AA2002389AF /* Sources */ = {
@@ -139,8 +416,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				32685E4927894AA3002389AF /* ViewController.swift in Sources */,
+				32685E68278976F8002389AF /* UIColor.swift in Sources */,
+				32685E6B278976F8002389AF /* UIViewController.swift in Sources */,
+				32685E6E278976F8002389AF /* Device.swift in Sources */,
+				32685E67278976F8002389AF /* Date.swift in Sources */,
+				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
+				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
 				32685E4527894AA3002389AF /* AppDelegate.swift in Sources */,
+				32685E8F2789D63B002389AF /* LoginMain.swift in Sources */,
+				32685E6D278976F8002389AF /* UIFont.swift in Sources */,
+				32685E932789EA60002389AF /* LoginDataManager.swift in Sources */,
+				32685E69278976F8002389AF /* String.swift in Sources */,
+				32685E7927897757002389AF /* Constant.swift in Sources */,
+				32685E7A27897757002389AF /* Key.swift in Sources */,
+				32685E66278976F8002389AF /* IndicatorView.swift in Sources */,
 				32685E4727894AA3002389AF /* SceneDelegate.swift in Sources */,
+				32685E6C278976F8002389AF /* UINavigationBar.swift in Sources */,
+				32685E912789D647002389AF /* LoginEmail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +576,7 @@
 		};
 		32685E5627894AA4002389AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B341B05EF9DF4718DFB38C /* Pods-YanoljaCloneApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +604,7 @@
 		};
 		32685E5727894AA4002389AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8DA0285D2BD6835B35698DC /* Pods-YanoljaCloneApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
