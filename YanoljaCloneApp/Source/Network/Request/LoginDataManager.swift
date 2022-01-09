@@ -13,7 +13,7 @@ import NaverThirdPartyLogin
 import Alamofire
 
 
-class LoginDataManager {
+class LoginDataManager : UIViewController {
     
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
@@ -34,11 +34,6 @@ class LoginDataManager {
                self.getKakaoInfo()
            }
         }
-    }
-    
-    func NaverLogin() {
-        loginInstance?.delegate = self
-        loginInstance?.requestThirdPartyLogin()
     }
     
     func getKakaoInfo() {
@@ -73,6 +68,11 @@ class LoginDataManager {
         }
     }
     
+    func NaverLogin() {
+        loginInstance?.delegate = self
+        loginInstance?.requestThirdPartyLogin()
+    }
+    
     func getNaverInfo() {
         guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
         
@@ -90,19 +90,16 @@ class LoginDataManager {
         let req = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
         
         req.responseJSON { response in
-          guard let result = response.value as? [String: Any] else { return }
-          guard let object = result["response"] as? [String: Any] else { return }
-          guard let name = object["name"] as? String else { return }
-          guard let email = object["email"] as? String else { return }
-          guard let nickname = object["nickname"] as? String else { return }
-          
-          self.nameLabel.text = "\(name)"
-          self.emailLabel.text = "\(email)"
-          self.nicknameLabel.text = "\(nickname)"
+            guard let result = response.value as? [String: Any] else { return }
+            guard let object = result["response"] as? [String: Any] else { return }
+            guard let name = object["name"] as? String else { return }
+        
+            Constant.ud.set(name, forKey: "name")
+            Constant.ud.set(true, forKey: "loginCheck")
         }
-      }
-    
+    }
 }
+
 
 
 extension LoginDataManager: NaverThirdPartyLoginConnectionDelegate {

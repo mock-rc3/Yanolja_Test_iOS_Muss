@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		29A7397133F404B44A463EB0 /* Pods_YanoljaCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F89168A098E9086E73BBB1 /* Pods_YanoljaCloneApp.framework */; };
+		322256AA278A76420090A0DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322256A9278A76420090A0DF /* SignInViewController.swift */; };
+		322256AC278A77D40090A0DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256AB278A77D40090A0DF /* Home.storyboard */; };
+		322256AE278A78220090A0DF /* Region.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256AD278A78220090A0DF /* Region.storyboard */; };
+		322256B0278A782D0090A0DF /* Peripheral.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256AF278A782C0090A0DF /* Peripheral.storyboard */; };
+		322256B3278A78410090A0DF /* Heart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256B2278A78410090A0DF /* Heart.storyboard */; };
+		322256B5278A784B0090A0DF /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256B4278A784B0090A0DF /* MyPage.storyboard */; };
+		322256B7278A82B70090A0DF /* TabManController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322256B6278A82B70090A0DF /* TabManController.swift */; };
 		32685E4527894AA3002389AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E4427894AA3002389AF /* AppDelegate.swift */; };
 		32685E4727894AA3002389AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E4627894AA3002389AF /* SceneDelegate.swift */; };
 		32685E4927894AA3002389AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E4827894AA3002389AF /* ViewController.swift */; };
@@ -34,9 +41,23 @@
 		32685E8F2789D63B002389AF /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E8E2789D63B002389AF /* LoginMain.swift */; };
 		32685E912789D647002389AF /* LoginEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E902789D647002389AF /* LoginEmail.swift */; };
 		32685E932789EA60002389AF /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E922789EA60002389AF /* LoginDataManager.swift */; };
+		32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */; };
+		32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */; };
+		32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */; };
+		32DDF8AF278A8410004C1280 /* TransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AE278A8410004C1280 /* TransportationViewController.swift */; };
+		32DDF8B1278A841F004C1280 /* AbroadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8B0278A841F004C1280 /* AbroadViewController.swift */; };
+		32DE3450278A8A3A00D2A055 /* ScrollandNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE344F278A8A3A00D2A055 /* ScrollandNavigation.swift */; };
+		32DE3452278B347D00D2A055 /* SignInPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE3451278B347D00D2A055 /* SignInPWViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322256A9278A76420090A0DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		322256AB278A77D40090A0DF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		322256AD278A78220090A0DF /* Region.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Region.storyboard; sourceTree = "<group>"; };
+		322256AF278A782C0090A0DF /* Peripheral.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Peripheral.storyboard; sourceTree = "<group>"; };
+		322256B2278A78410090A0DF /* Heart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heart.storyboard; sourceTree = "<group>"; };
+		322256B4278A784B0090A0DF /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		322256B6278A82B70090A0DF /* TabManController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManController.swift; sourceTree = "<group>"; };
 		32685E4127894AA2002389AF /* YanoljaCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YanoljaCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32685E4427894AA3002389AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32685E4627894AA3002389AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +86,13 @@
 		32685E8E2789D63B002389AF /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
 		32685E902789D647002389AF /* LoginEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmail.swift; sourceTree = "<group>"; };
 		32685E922789EA60002389AF /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
+		32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticViewController.swift; sourceTree = "<group>"; };
+		32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
+		32DDF8AE278A8410004C1280 /* TransportationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationViewController.swift; sourceTree = "<group>"; };
+		32DDF8B0278A841F004C1280 /* AbroadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbroadViewController.swift; sourceTree = "<group>"; };
+		32DE344F278A8A3A00D2A055 /* ScrollandNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollandNavigation.swift; sourceTree = "<group>"; };
+		32DE3451278B347D00D2A055 /* SignInPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPWViewController.swift; sourceTree = "<group>"; };
 		B8DA0285D2BD6835B35698DC /* Pods-YanoljaCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YanoljaCloneApp.release.xcconfig"; path = "Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		C4F89168A098E9086E73BBB1 /* Pods_YanoljaCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YanoljaCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B341B05EF9DF4718DFB38C /* Pods-YanoljaCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YanoljaCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-YanoljaCloneApp/Pods-YanoljaCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,9 +156,9 @@
 		32685E5A278976C6002389AF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				32685E4A27894AA3002389AF /* Main.storyboard */,
 				32685E87278978CF002389AF /* Account */,
 				32685E8427897864002389AF /* Network */,
-				32685E4A27894AA3002389AF /* Main.storyboard */,
 				32685E832789783F002389AF /* MyPage */,
 				32685E8227897838002389AF /* Heart */,
 				32685E812789782A002389AF /* Peripheral */,
@@ -197,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				32685E7827897757002389AF /* BaseViewController.swift */,
+				32DE344F278A8A3A00D2A055 /* ScrollandNavigation.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -204,6 +233,13 @@
 		32685E7F27897815002389AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				322256AB278A77D40090A0DF /* Home.storyboard */,
+				322256B6278A82B70090A0DF /* TabManController.swift */,
+				32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */,
+				32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */,
+				32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */,
+				32DDF8AE278A8410004C1280 /* TransportationViewController.swift */,
+				32DDF8B0278A841F004C1280 /* AbroadViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -211,6 +247,7 @@
 		32685E802789781B002389AF /* Region */ = {
 			isa = PBXGroup;
 			children = (
+				322256AD278A78220090A0DF /* Region.storyboard */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -218,6 +255,7 @@
 		32685E812789782A002389AF /* Peripheral */ = {
 			isa = PBXGroup;
 			children = (
+				322256AF278A782C0090A0DF /* Peripheral.storyboard */,
 			);
 			path = Peripheral;
 			sourceTree = "<group>";
@@ -225,6 +263,7 @@
 		32685E8227897838002389AF /* Heart */ = {
 			isa = PBXGroup;
 			children = (
+				322256B2278A78410090A0DF /* Heart.storyboard */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -232,6 +271,7 @@
 		32685E832789783F002389AF /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				322256B4278A784B0090A0DF /* MyPage.storyboard */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -259,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				32685E8A2789791A002389AF /* Signin.storyboard */,
+				322256A9278A76420090A0DF /* SignInViewController.swift */,
+				32DE3451278B347D00D2A055 /* SignInPWViewController.swift */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -358,8 +400,13 @@
 				32685E8D27897927002389AF /* Login.storyboard in Resources */,
 				32685E7C27897757002389AF /* NotoSansCJKkr-Regular.otf in Resources */,
 				32685E5127894AA4002389AF /* LaunchScreen.storyboard in Resources */,
+				322256B3278A78410090A0DF /* Heart.storyboard in Resources */,
+				322256AC278A77D40090A0DF /* Home.storyboard in Resources */,
 				32685E8B2789791A002389AF /* Signin.storyboard in Resources */,
+				322256B0278A782D0090A0DF /* Peripheral.storyboard in Resources */,
 				32685E4E27894AA4002389AF /* Assets.xcassets in Resources */,
+				322256AE278A78220090A0DF /* Region.storyboard in Resources */,
+				322256B5278A784B0090A0DF /* MyPage.storyboard in Resources */,
 				32685E4C27894AA3002389AF /* Main.storyboard in Resources */,
 				32685E7B27897757002389AF /* NotoSansCJKkr-Medium.otf in Resources */,
 				32685E7D27897757002389AF /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -422,14 +469,23 @@
 				32685E67278976F8002389AF /* Date.swift in Sources */,
 				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
 				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
+				32DE3452278B347D00D2A055 /* SignInPWViewController.swift in Sources */,
 				32685E4527894AA3002389AF /* AppDelegate.swift in Sources */,
+				32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */,
 				32685E8F2789D63B002389AF /* LoginMain.swift in Sources */,
+				32DE3450278A8A3A00D2A055 /* ScrollandNavigation.swift in Sources */,
+				322256AA278A76420090A0DF /* SignInViewController.swift in Sources */,
 				32685E6D278976F8002389AF /* UIFont.swift in Sources */,
+				32DDF8AF278A8410004C1280 /* TransportationViewController.swift in Sources */,
 				32685E932789EA60002389AF /* LoginDataManager.swift in Sources */,
 				32685E69278976F8002389AF /* String.swift in Sources */,
 				32685E7927897757002389AF /* Constant.swift in Sources */,
+				32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */,
 				32685E7A27897757002389AF /* Key.swift in Sources */,
+				32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */,
+				32DDF8B1278A841F004C1280 /* AbroadViewController.swift in Sources */,
 				32685E66278976F8002389AF /* IndicatorView.swift in Sources */,
+				322256B7278A82B70090A0DF /* TabManController.swift in Sources */,
 				32685E4727894AA3002389AF /* SceneDelegate.swift in Sources */,
 				32685E6C278976F8002389AF /* UINavigationBar.swift in Sources */,
 				32685E912789D647002389AF /* LoginEmail.swift in Sources */,

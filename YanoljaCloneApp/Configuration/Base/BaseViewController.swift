@@ -16,7 +16,9 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [
             .font : UIFont.NotoSans(.medium, size: 16),
         ]
+        
         self.navigationItem.backBarButtonItem?.title = ""
+        self.navigationItem.backBarButtonItem?.tintColor = .black
         
         // Background Color
         self.view.backgroundColor = .white
