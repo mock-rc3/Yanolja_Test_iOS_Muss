@@ -21,6 +21,9 @@ class SignInPWViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.backBarButtonItem?.title = ""
+        self.navigationItem.backBarButtonItem?.tintColor = .darkGray
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         SignInComplete.addGestureRecognizer(tapGesture)
     }
