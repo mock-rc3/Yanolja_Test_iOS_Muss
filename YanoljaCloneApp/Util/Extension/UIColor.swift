@@ -26,4 +26,5 @@ extension UIColor {
     class var yanoljaGray: UIColor {UIColor(red: 187/255, green: 187/255, blue: 186/255, alpha: 1)}
     class var yanoljaIndicator: UIColor{UIColor(red: 200/255, green: 2/255, blue: 39/255, alpha: 1)}
     class var emailBlue: UIColor{UIColor(red: 1/255, green: 1/255, blue: 196/255, alpha: 1)}
+    class var VeryLightGray : UIColor{UIColor(red: 228/255, green: 228/255, blue: 229/255, alpha: 1)}
 }

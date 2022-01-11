@@ -8,23 +8,28 @@
 import Foundation
 import UIKit
 
-class RecommendationViewController : ScrollandNavigation{
+class DomesticViewController : BaseViewController {
+    
+    var images = ["Banner1", "Banner2", "Banner3"]
+    
+    var IconTitle = ["모텔", "호텔", "프리미엄호텔", "펜션&풀빌라", "프리미엄펜션", "리조트", "글램핑&캠핑", "게하&한옥", "호캉스패키지", "스파펜션", "부티크브랜드", "QR체크인", "야놀자케어", "대실할인", "얼리버드특가", "지역여행혜택", "부산", "제주도", "Top랭킹", "더보기"]
     
     
-    var images = ["S배너1", "S배너2", "S배너3"]
-    
-    var IconTitle = ["첫여행할인", "코인뽑기머신", "지역여행혜택", "나만의쿠폰", "1월혜택모음", "모텔특가", "선착순쿠폰", "무한쿠폰룸", "호텔특가", "펜션특가"]
-    
-
     @IBOutlet weak var IconCollectionView: UICollectionView!
-    @IBOutlet weak var RelationCollectionView: UICollectionView!
+    @IBOutlet weak var DomesticCollectionView: UICollectionView!
+    @IBOutlet weak var DomesticTableView: UITableView!
+    
+    @IBOutlet weak var stack1: UIView!
+    @IBOutlet weak var stack2: UIView!
+    @IBOutlet weak var stack3: UIView!
+    @IBOutlet weak var stack4: UIView!
     
     @IBOutlet weak var BannerImg: UIImageView!
     @IBOutlet weak var PageControl: UIPageControl!
     
-    @IBOutlet weak var Price1: UIView!
-    @IBOutlet weak var Price2: UIView!
-    @IBOutlet weak var Price3: UIView!
+    @IBOutlet weak var Banner1: UIImageView!
+    @IBOutlet weak var Banner2: UIImageView!
+    @IBOutlet weak var Banner3: UIImageView!
     
     
     
@@ -32,8 +37,6 @@ class RecommendationViewController : ScrollandNavigation{
         
         BannerImg.image = UIImage(named: images[PageControl.currentPage])
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,26 +51,31 @@ class RecommendationViewController : ScrollandNavigation{
         PageControl.currentPageIndicatorTintColor = UIColor.black
         BannerImg.image = UIImage(named: images[0])
         
+        
         self.IconCollectionView.delegate = self
         self.IconCollectionView.dataSource = self
-        self.RelationCollectionView.delegate = self
-        self.RelationCollectionView.dataSource = self
+        self.DomesticCollectionView.delegate = self
+        self.DomesticCollectionView.dataSource = self
+        self.DomesticTableView.delegate = self
+        self.DomesticTableView.dataSource = self
         
+        stack1.layer.borderWidth = 1
+        stack1.layer.borderColor = UIColor.VeryLightGray.cgColor
+        stack2.layer.borderWidth = 1
+        stack2.layer.borderColor = UIColor.VeryLightGray.cgColor
+        stack3.layer.borderWidth = 1
+        stack3.layer.borderColor = UIColor.VeryLightGray.cgColor
+        stack4.layer.borderWidth = 1
+        stack4.layer.borderColor = UIColor.VeryLightGray.cgColor
         
-        Price1.layer.masksToBounds = true
-        Price1.layer.cornerRadius = 20
-        Price2.layer.masksToBounds = true
-        Price2.layer.cornerRadius = 20
-        Price3.layer.masksToBounds = true
-        Price3.layer.cornerRadius = 20
-        
+        Banner1.layer.cornerRadius = 20
+        Banner2.layer.cornerRadius = 20
+        Banner3.layer.cornerRadius = 20
         
     }
 }
 
-
-
-extension RecommendationViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+extension DomesticViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -75,9 +83,9 @@ extension RecommendationViewController : UICollectionViewDelegate, UICollectionV
         if collectionView == IconCollectionView{
             
             let width = (collectionView.frame.width - 30) / 5
-            let height = (collectionView.frame.height - 10) / 2
+            let height = (collectionView.frame.height - 10) / 4
             print("collectionView width=\(collectionView.frame.width)")
-            print("cell하나당 width=\(width)")
+            print("first cell하나당 width=\(width)")
             let size = CGSize(width: width, height: height)
             
             return size
@@ -122,42 +130,54 @@ extension RecommendationViewController : UICollectionViewDelegate, UICollectionV
 
 }
 
-extension RecommendationViewController : UICollectionViewDataSource {
+extension DomesticViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == IconCollectionView {
             return IconTitle.count
-        }
-        if collectionView == RelationCollectionView {
+        } else {
             return 0
         }
-        
-        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == IconCollectionView {
-            let cellOne = IconCollectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! RecommendIconCollectionViewCell
+            let cellOne = IconCollectionView.dequeueReusableCell(withReuseIdentifier: "firstCell", for: indexPath) as! DomesticIconCollectionViewCell
             
             cellOne.IconImg.image = UIImage(named: IconTitle[indexPath.row])
             cellOne.IconTitle.text = IconTitle[indexPath.row]
         
             
             return cellOne
-        }
-        
-        if collectionView == RelationCollectionView {
-            let cellTwo = RelationCollectionView.dequeueReusableCell(withReuseIdentifier: "secondCell", for: indexPath) as! RecommendCollectionViewCell
+            
+        }else {
+            
+            let cellTwo = DomesticCollectionView.dequeueReusableCell(withReuseIdentifier: "secondCell", for: indexPath) as! RecommendCollectionViewCell
             
             // 전달받은 cell 내용 입력
             
             
             return cellTwo
         }
-        
-
-        return UICollectionViewCell()
-
     }
 }
+
+extension DomesticViewController : UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = DomesticTableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath)
+        
+        return cell
+    }
+}
+
+
+
+

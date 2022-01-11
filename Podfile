@@ -12,6 +12,7 @@ pod 'KakaoSDKUser'
 pod 'naveridlogin-sdk-ios'
 pod 'Tabman'
 pod 'Pageboy'
+pod 'Cosmos'
 
   # Pods for YanoljaCloneApp
 

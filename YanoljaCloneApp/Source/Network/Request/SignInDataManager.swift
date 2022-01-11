@@ -10,38 +10,78 @@ import Alamofire
 
 class SignInDataManeger : UIViewController {
     
-    
+    //이메일 인증번호 요청
     func EmailAuthCheck(email: String, delegate: SignInViewController) {
-        let url = "\(Constant.BASE_URL)"
+        let url = "http://\(Constant.BASE_URL)"
             + "/email-auth"
         
-        let login = ["email" : "\(email)"] as Dictionary
+        let parameters = ["email" : email] as Dictionary
         
-        AF.request(url, method: .post, parameters: login, encoding: JSONEncoding.default, headers: nil)
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
-            .responseDecodable(of: EmailAuthResponse.self) { response in
+            .responseDecodable(of: AuthResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     delegate.didRetrieveEmailAuthCheck(result: response)
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    print(url)
+                    print(error)
                     delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
                 }
             }
     }
     
+    //이메일 인증번호 응답
     func EmailAuthNumCheck(authNum: String, delegate: SignInViewController) {
-        let url = "\(Constant.BASE_URL)"
+        let url = "http://\(Constant.BASE_URL)"
             + "/email-confirm"
         
-        let auth = ["authNumber" : "\(authNum)"] as Dictionary
+        let parameters = ["authNumber" : authNum] as Dictionary
         
-        AF.request(url, method: .post, parameters: auth, encoding: JSONEncoding.default, headers: nil)
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
-            .responseDecodable(of: EmailAuthResponse.self) { response in
+            .responseDecodable(of: AuthResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     delegate.didRetrieveEmailAuthNum(result: response)
+                case .failure(let error):
+                    print(error)
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
+    
+    //핸드폰 인증번호 요청
+    func PhoneAuthCheck(phoneNumber: String, delegate: SignInPHViewController) {
+        let url = "http://\(Constant.BASE_URL)"
+            + "/phone-auth"
+        
+        let parameters = ["phoneNumber" : phoneNumber] as Dictionary
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: AuthResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    delegate.didRetrievePHAuthCheck(result: response)
+                case .failure(let error):
+                    print(error)
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
+    
+    //핸드폰 인증번호 응답 - GET 방식
+    func PhoneAuthNumCheck(authNum: String, phoneNumber: String, delegate: SignInPHViewController) {
+        let url = "http://\(Constant.BASE_URL)"
+            + "/phone-confirm?phone_num=\(phoneNumber)&auth_num=\(authNum)"
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: AuthResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    delegate.didRetrievePHAuthNum(result: response)
                 case .failure(let error):
                     print(error.localizedDescription)
                     delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
@@ -49,7 +89,27 @@ class SignInDataManeger : UIViewController {
             }
     }
     
-    
-    
-    
+    //데이터베이스에 정보저장
+    func StoreUserInfo(email: String, phoneNumber: String, password: String ,delegate: SignInPHViewController) {
+        let url = "http://\(Constant.BASE_URL)"
+            + "/sign-up"
+        
+        let parameters : [String : String] = [
+            "email" : email,
+            "phoneNumber" : phoneNumber,
+            "password" : password
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: SignUpAndLogIn.self) { response in
+                switch response.result {
+                case .success(let response):
+                    delegate.didStoreUserInfo(result: response)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
 }

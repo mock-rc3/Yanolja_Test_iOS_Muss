@@ -52,12 +52,13 @@ class SignInViewController : BaseViewController {
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
         
-        print("tapped")
+        print("first tapped")
         
         if let EmailInfo = EmailTextField.text {
             // 이메일 정보 데이터베이스에 저장하는 코드
             emailInfo = EmailInfo
             dataManager.EmailAuthCheck(email: emailInfo, delegate: self)
+            self.showIndicator()
             
         } else {return}
         
@@ -66,8 +67,11 @@ class SignInViewController : BaseViewController {
     
     @objc func secondHandleTap(sender: UITapGestureRecognizer) {
         
+        print("second tapped")
+        
         if let check = AuthCodeEnter.text {
             dataManager.EmailAuthNumCheck(authNum: check, delegate: self)
+            self.showIndicator()
             
         } else {return}
         
@@ -104,10 +108,14 @@ class SignInViewController : BaseViewController {
     func authCodeCorrectForm() {
         
         if let authCode = AuthCodeEnter.text{
-            if authCode.count == 6{
+            if authCode.count == 8{
                 NextView.backgroundColor = UIColor(red: 1/255, green: 128/255, blue: 97/255, alpha: 1)
+                let secondTapGesture = UITapGestureRecognizer(target: self, action: #selector(secondHandleTap(sender:)))
                 NextView.addGestureRecognizer(secondTapGesture)
             } else {
+                NextView.backgroundColor = UIColor.lightGray
+                NextView.removeGestureRecognizer(secondTapGesture)
+                
                 return
             }
         }
@@ -117,9 +125,11 @@ class SignInViewController : BaseViewController {
 
 
 extension SignInViewController {
-    func didRetrieveEmailAuthCheck (result : EmailAuthResponse){
+    func didRetrieveEmailAuthCheck (result : AuthResponse){
         switch result.code{
         case 1000:
+            self.dismissIndicator()
+            
             message = "인증번호가 발송되었습니다."
             sentCount = sentCount - 1
             if sentCount != -1 {
@@ -148,8 +158,9 @@ extension SignInViewController {
 
 
 extension SignInViewController {
-    func didRetrieveEmailAuthNum (result : EmailAuthResponse) {
+    func didRetrieveEmailAuthNum (result : AuthResponse) {
         if result.isSuccess {
+            self.dismissIndicator()
             let NextPhase = self.storyboard?.instantiateViewController(withIdentifier: "second") as! SignInPWViewController
             NextPhase.EmailInfo = emailInfo
             navigationController?.pushViewController(NextPhase, animated: true)

@@ -15,6 +15,10 @@
 		322256B3278A78410090A0DF /* Heart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256B2278A78410090A0DF /* Heart.storyboard */; };
 		322256B5278A784B0090A0DF /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256B4278A784B0090A0DF /* MyPage.storyboard */; };
 		322256B7278A82B70090A0DF /* TabManController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322256B6278A82B70090A0DF /* TabManController.swift */; };
+		32472084278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472083278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift */; };
+		32472086278D43FE009E4B8B /* DomesticCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */; };
+		32472088278D7F52009E4B8B /* SIgnInPHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */; };
+		3247208A278D8E24009E4B8B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472089278D8E24009E4B8B /* MyPageViewController.swift */; };
 		325206FE278C3AD0008071FA /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325206FD278C3AD0008071FA /* SignInDataManager.swift */; };
 		32520700278C3BE8008071FA /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325206FF278C3BE8008071FA /* LogInResponse.swift */; };
 		32520703278C89B9008071FA /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32520702278C89B9008071FA /* RecommendCollectionViewCell.swift */; };
@@ -62,6 +66,10 @@
 		322256B2278A78410090A0DF /* Heart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heart.storyboard; sourceTree = "<group>"; };
 		322256B4278A784B0090A0DF /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		322256B6278A82B70090A0DF /* TabManController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManController.swift; sourceTree = "<group>"; };
+		32472083278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticIconCollectionViewCell.swift; sourceTree = "<group>"; };
+		32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticCollectionViewCell.swift; sourceTree = "<group>"; };
+		32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPHViewController.swift; sourceTree = "<group>"; };
+		32472089278D8E24009E4B8B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		325206FD278C3AD0008071FA /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
 		325206FF278C3BE8008071FA /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
 		32520702278C89B9008071FA /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +133,16 @@
 				B8DA0285D2BD6835B35698DC /* Pods-YanoljaCloneApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		32472082278D4161009E4B8B /* Domestic */ = {
+			isa = PBXGroup;
+			children = (
+				32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */,
+				32472083278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift */,
+				32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */,
+			);
+			path = Domestic;
 			sourceTree = "<group>";
 		};
 		32520701278C898C008071FA /* Recommend */ = {
@@ -254,7 +272,7 @@
 				322256AB278A77D40090A0DF /* Home.storyboard */,
 				322256B6278A82B70090A0DF /* TabManController.swift */,
 				32520701278C898C008071FA /* Recommend */,
-				32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */,
+				32472082278D4161009E4B8B /* Domestic */,
 				32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */,
 				32DDF8AE278A8410004C1280 /* TransportationViewController.swift */,
 				32DDF8B0278A841F004C1280 /* AbroadViewController.swift */,
@@ -290,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				322256B4278A784B0090A0DF /* MyPage.storyboard */,
+				32472089278D8E24009E4B8B /* MyPageViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -319,6 +338,7 @@
 				32685E8A2789791A002389AF /* Signin.storyboard */,
 				322256A9278A76420090A0DF /* SignInViewController.swift */,
 				32DE3451278B347D00D2A055 /* SignInPWViewController.swift */,
+				32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -488,7 +508,10 @@
 				325206FE278C3AD0008071FA /* SignInDataManager.swift in Sources */,
 				32520700278C3BE8008071FA /* LogInResponse.swift in Sources */,
 				32685E6E278976F8002389AF /* Device.swift in Sources */,
+				32472088278D7F52009E4B8B /* SIgnInPHViewController.swift in Sources */,
 				32685E67278976F8002389AF /* Date.swift in Sources */,
+				32472084278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift in Sources */,
+				32472086278D43FE009E4B8B /* DomesticCollectionViewCell.swift in Sources */,
 				32520705278C8B37008071FA /* RecommendIconCollectionViewCell.swift in Sources */,
 				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
 				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
@@ -509,6 +532,7 @@
 				32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */,
 				32DDF8B1278A841F004C1280 /* AbroadViewController.swift in Sources */,
 				32685E66278976F8002389AF /* IndicatorView.swift in Sources */,
+				3247208A278D8E24009E4B8B /* MyPageViewController.swift in Sources */,
 				322256B7278A82B70090A0DF /* TabManController.swift in Sources */,
 				32685E4727894AA3002389AF /* SceneDelegate.swift in Sources */,
 				32685E6C278976F8002389AF /* UINavigationBar.swift in Sources */,

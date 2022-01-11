@@ -9,9 +9,21 @@
 import Foundation
 
 
-struct EmailAuthResponse : Decodable {
+struct AuthResponse : Decodable {
     var isSuccess : Bool
     var code : Int
     var message : String
+}
+
+struct SignUpAndLogIn : Decodable {
+    var isSuccess : Bool
+    var code : Int
+    var message : String
+    var result : Token
+}
+
+struct Token : Decodable {
+    var id : String
+    var jwt : String
 }
 
