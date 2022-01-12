@@ -53,6 +53,8 @@
 		32860ED0278EA1D6005356BB /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ECF278EA1D6005356BB /* IconCollectionViewCell.swift */; };
 		32860ED2278EA1F8005356BB /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED1278EA1F8005356BB /* FirstCollectionViewCell.swift */; };
 		32860ED4278EA203005356BB /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED3278EA203005356BB /* SecondCollectionViewCell.swift */; };
+		32860ED6278ED423005356BB /* TransIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED5278ED423005356BB /* TransIconCollectionViewCell.swift */; };
+		32860ED8278F30B9005356BB /* AbroadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED7278F30B9005356BB /* AbroadCollectionViewCell.swift */; };
 		32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */; };
 		32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */; };
 		32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */; };
@@ -110,6 +112,8 @@
 		32860ECF278EA1D6005356BB /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		32860ED1278EA1F8005356BB /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		32860ED3278EA203005356BB /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		32860ED5278ED423005356BB /* TransIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransIconCollectionViewCell.swift; sourceTree = "<group>"; };
+		32860ED7278F30B9005356BB /* AbroadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbroadCollectionViewCell.swift; sourceTree = "<group>"; };
 		32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticViewController.swift; sourceTree = "<group>"; };
 		32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
@@ -393,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				32DDF8AE278A8410004C1280 /* TransportationViewController.swift */,
+				32860ED5278ED423005356BB /* TransIconCollectionViewCell.swift */,
 			);
 			path = Transportation;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				32DDF8B0278A841F004C1280 /* AbroadViewController.swift */,
+				32860ED7278F30B9005356BB /* AbroadCollectionViewCell.swift */,
 			);
 			path = Abroad;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				32685E4927894AA3002389AF /* ViewController.swift in Sources */,
 				32685E68278976F8002389AF /* UIColor.swift in Sources */,
 				32685E6B278976F8002389AF /* UIViewController.swift in Sources */,
+				32860ED8278F30B9005356BB /* AbroadCollectionViewCell.swift in Sources */,
 				32860ED2278EA1F8005356BB /* FirstCollectionViewCell.swift in Sources */,
 				325206FE278C3AD0008071FA /* SignInDataManager.swift in Sources */,
 				32520700278C3BE8008071FA /* LogInResponse.swift in Sources */,
@@ -550,6 +557,7 @@
 				32472084278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift in Sources */,
 				32472086278D43FE009E4B8B /* DomesticCollectionViewCell.swift in Sources */,
 				32520705278C8B37008071FA /* RecommendIconCollectionViewCell.swift in Sources */,
+				32860ED6278ED423005356BB /* TransIconCollectionViewCell.swift in Sources */,
 				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
 				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
 				32860ED4278EA203005356BB /* SecondCollectionViewCell.swift in Sources */,

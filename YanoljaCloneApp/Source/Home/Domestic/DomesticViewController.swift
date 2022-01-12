@@ -68,9 +68,9 @@ class DomesticViewController : BaseViewController {
         stack4.layer.borderWidth = 1
         stack4.layer.borderColor = UIColor.VeryLightGray.cgColor
         
-        Banner1.layer.cornerRadius = 20
-        Banner2.layer.cornerRadius = 20
-        Banner3.layer.cornerRadius = 20
+        Banner1.layer.cornerRadius = 15
+        Banner2.layer.cornerRadius = 15
+        Banner3.layer.cornerRadius = 15
         
     }
 }
