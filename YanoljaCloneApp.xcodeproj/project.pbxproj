@@ -49,6 +49,10 @@
 		32685E8F2789D63B002389AF /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E8E2789D63B002389AF /* LoginMain.swift */; };
 		32685E912789D647002389AF /* LoginEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E902789D647002389AF /* LoginEmail.swift */; };
 		32685E932789EA60002389AF /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E922789EA60002389AF /* LoginDataManager.swift */; };
+		32860ECB278E880D005356BB /* DomesticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ECA278E880D005356BB /* DomesticTableView.swift */; };
+		32860ED0278EA1D6005356BB /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ECF278EA1D6005356BB /* IconCollectionViewCell.swift */; };
+		32860ED2278EA1F8005356BB /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED1278EA1F8005356BB /* FirstCollectionViewCell.swift */; };
+		32860ED4278EA203005356BB /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED3278EA203005356BB /* SecondCollectionViewCell.swift */; };
 		32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */; };
 		32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */; };
 		32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */; };
@@ -102,6 +106,10 @@
 		32685E8E2789D63B002389AF /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
 		32685E902789D647002389AF /* LoginEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmail.swift; sourceTree = "<group>"; };
 		32685E922789EA60002389AF /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		32860ECA278E880D005356BB /* DomesticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticTableView.swift; sourceTree = "<group>"; };
+		32860ECF278EA1D6005356BB /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		32860ED1278EA1F8005356BB /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		32860ED3278EA203005356BB /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticViewController.swift; sourceTree = "<group>"; };
 		32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 				32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */,
 				32472083278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift */,
 				32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */,
+				32860ECA278E880D005356BB /* DomesticTableView.swift */,
 			);
 			path = Domestic;
 			sourceTree = "<group>";
@@ -273,9 +282,9 @@
 				322256B6278A82B70090A0DF /* TabManController.swift */,
 				32520701278C898C008071FA /* Recommend */,
 				32472082278D4161009E4B8B /* Domestic */,
-				32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */,
-				32DDF8AE278A8410004C1280 /* TransportationViewController.swift */,
-				32DDF8B0278A841F004C1280 /* AbroadViewController.swift */,
+				32860ECC278E891D005356BB /* Entertainment */,
+				32860ECD278E8938005356BB /* Transportation */,
+				32860ECE278E8940005356BB /* Abroad */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -367,6 +376,33 @@
 				325206FD278C3AD0008071FA /* SignInDataManager.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		32860ECC278E891D005356BB /* Entertainment */ = {
+			isa = PBXGroup;
+			children = (
+				32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */,
+				32860ECF278EA1D6005356BB /* IconCollectionViewCell.swift */,
+				32860ED1278EA1F8005356BB /* FirstCollectionViewCell.swift */,
+				32860ED3278EA203005356BB /* SecondCollectionViewCell.swift */,
+			);
+			path = Entertainment;
+			sourceTree = "<group>";
+		};
+		32860ECD278E8938005356BB /* Transportation */ = {
+			isa = PBXGroup;
+			children = (
+				32DDF8AE278A8410004C1280 /* TransportationViewController.swift */,
+			);
+			path = Transportation;
+			sourceTree = "<group>";
+		};
+		32860ECE278E8940005356BB /* Abroad */ = {
+			isa = PBXGroup;
+			children = (
+				32DDF8B0278A841F004C1280 /* AbroadViewController.swift */,
+			);
+			path = Abroad;
 			sourceTree = "<group>";
 		};
 		5FC26B33292A3C979B326A4B /* Frameworks */ = {
@@ -505,6 +541,7 @@
 				32685E4927894AA3002389AF /* ViewController.swift in Sources */,
 				32685E68278976F8002389AF /* UIColor.swift in Sources */,
 				32685E6B278976F8002389AF /* UIViewController.swift in Sources */,
+				32860ED2278EA1F8005356BB /* FirstCollectionViewCell.swift in Sources */,
 				325206FE278C3AD0008071FA /* SignInDataManager.swift in Sources */,
 				32520700278C3BE8008071FA /* LogInResponse.swift in Sources */,
 				32685E6E278976F8002389AF /* Device.swift in Sources */,
@@ -515,10 +552,12 @@
 				32520705278C8B37008071FA /* RecommendIconCollectionViewCell.swift in Sources */,
 				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
 				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
+				32860ED4278EA203005356BB /* SecondCollectionViewCell.swift in Sources */,
 				32DE3452278B347D00D2A055 /* SignInPWViewController.swift in Sources */,
 				32685E4527894AA3002389AF /* AppDelegate.swift in Sources */,
 				32520703278C89B9008071FA /* RecommendCollectionViewCell.swift in Sources */,
 				32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */,
+				32860ECB278E880D005356BB /* DomesticTableView.swift in Sources */,
 				32685E8F2789D63B002389AF /* LoginMain.swift in Sources */,
 				32DE3450278A8A3A00D2A055 /* ScrollandNavigation.swift in Sources */,
 				322256AA278A76420090A0DF /* SignInViewController.swift in Sources */,
@@ -528,6 +567,7 @@
 				32685E69278976F8002389AF /* String.swift in Sources */,
 				32685E7927897757002389AF /* Constant.swift in Sources */,
 				32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */,
+				32860ED0278EA1D6005356BB /* IconCollectionViewCell.swift in Sources */,
 				32685E7A27897757002389AF /* Key.swift in Sources */,
 				32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */,
 				32DDF8B1278A841F004C1280 /* AbroadViewController.swift in Sources */,

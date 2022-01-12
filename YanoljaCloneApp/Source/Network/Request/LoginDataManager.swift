@@ -98,36 +98,62 @@ class LoginDataManager : UIViewController {
             Constant.ud.set(true, forKey: "loginCheck")
         }
     }
+    
+    
+    func LoginRequest(ID: String, PW: String, delegate: LoginEmailView) {
+        let url = "http://\(Constant.BASE_URL)"
+            + "/login"
+        
+        let parameters : [String : String] = [
+            "email" : ID,
+            "password" : PW
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: SignUpAndLogIn.self) { response in
+                switch response.result {
+                case .success(let response):
+                    delegate.didRetrieveUserInfo(result: response)
+                case .failure(let error):
+                    print(error)
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
+    
 }
 
 
 
 extension LoginDataManager: NaverThirdPartyLoginConnectionDelegate {
-  // 로그인 버튼을 눌렀을 경우 열게 될 브라우저
-  func oauth20ConnectionDidOpenInAppBrowser(forOAuth request: URLRequest!) {
-//     let naverSignInVC = NLoginThirdPartyOAuth20InAppBrowserViewController(request: request)!
-//     naverSignInVC.parentOrientation = UIInterfaceOrientation(rawValue: UIDevice.current.orientation.rawValue)!
-//     present(naverSignInVC, animated: false, completion: nil)
-  }
-  
-  // 로그인에 성공했을 경우 호출
-  func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+    // 로그인 버튼을 눌렀을 경우 열게 될 브라우저
+    func oauth20ConnectionDidOpenInAppBrowser(forOAuth request: URLRequest!) {
+    //     let naverSignInVC = NLoginThirdPartyOAuth20InAppBrowserViewController(request: request)!
+    //     naverSignInVC.parentOrientation = UIInterfaceOrientation(rawValue: UIDevice.current.orientation.rawValue)!
+    //     present(naverSignInVC, animated: false, completion: nil)
+    }
+
+    // 로그인에 성공했을 경우 호출
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
     print("[Success] : Success Naver Login")
     getNaverInfo()
-  }
-  
-  // 접근 토큰 갱신
-  func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
-    
-  }
-  
-  // 로그아웃 할 경우 호출(토큰 삭제)
-  func oauth20ConnectionDidFinishDeleteToken() {
+    }
+
+    // 접근 토큰 갱신
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+
+    }
+
+    // 로그아웃 할 경우 호출(토큰 삭제)
+    func oauth20ConnectionDidFinishDeleteToken() {
     loginInstance?.requestDeleteToken()
-  }
-  
-  // 모든 Error
-  func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+    }
+
+    // 모든 Error
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
     print("[Error] :", error.localizedDescription)
-  }
+    }
 }
+
+
