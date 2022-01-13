@@ -6,7 +6,13 @@
 //
 
 // MARK: Secret 폴더 안에서 사용하는 파일들은 .gitignore에 추가해주세요!!
-struct KobisKey {
+struct Key {
     
-    static let BOOK_API_KEY = "DE3506F7A70552116B5E5862640F70DE44CA723ABF7F29EC312FFBAFFDE3C6F8"
+    static let NATIVE_APP_KEY = "d01fa8b3826f61d05133f366f1a455a6"
+    static let KAKAO_REST_API_KEY = "5449988e38456c902b48e00ff37231d8"
+    
+    static let NAVER_CLIENT_ID = "c4a1Czeu6gsdixcfZ540"
+    static let NAVER_CLIENT_SECRET = "kiwtDktNft"
+    
+    
 }

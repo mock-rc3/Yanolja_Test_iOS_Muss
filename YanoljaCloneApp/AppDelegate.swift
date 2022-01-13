@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        KakaoSDK.initSDK(appKey: "d01fa8b3826f61d05133f366f1a455a6")
+        KakaoSDK.initSDK(appKey: Key.NATIVE_APP_KEY)
         
         
         let instance = NaverThirdPartyLoginConnection.getSharedInstance()
@@ -36,9 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 애플리케이션을 등록할 때 입력한 URL Scheme
         instance?.serviceUrlScheme = "naverlogin"
         // 애플리케이션 등록 후 발급받은 클라이언트 아이디
-        instance?.consumerKey = "c4a1Czeu6gsdixcfZ540"
+        instance?.consumerKey = Key.NAVER_CLIENT_ID
         // 애플리케이션 등록 후 발급받은 클라이언트 시크릿
-        instance?.consumerSecret = "kiwtDktNft"
+        instance?.consumerSecret = Key.NAVER_CLIENT_SECRET
         // 애플리케이션 이름
         instance?.appName = "야놀자 클론"
     
