@@ -15,12 +15,19 @@ class RegionViewController : BaseViewController {
     var mainArea : Array<String> = []
     var subArea : Array<String> = []
     
+    var closeCheck : Bool = true
+    
     @IBOutlet weak var LargeTableView: UITableView!
     @IBOutlet weak var SmallTableView: UITableView!
+    
+    @IBOutlet weak var CloseViewBtn: UIButton!
+    @IBOutlet weak var SearchBtn: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        CloseViewBtn.isHidden = closeCheck
         
         self.LargeTableView.delegate = self
         self.LargeTableView.dataSource = self
@@ -30,14 +37,32 @@ class RegionViewController : BaseViewController {
         
         self.dataManager.InquireRegion(delegate: self)
         self.showIndicator()
-        
     }
+    
+    @IBAction func CloseView(_ sender: Any) {
+        closeCheck = false
+        self.dismiss(animated: true)
+    }
+    
+    
+    
 }
 
 extension RegionViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == SmallTableView {
+            let RLVC = self.storyboard?.instantiateViewController(withIdentifier: "restListView") as! RestListViewController
+            
+            RLVC.areaId = indexPath.row + 1
+            RLVC.SpecificLocation = subArea[indexPath.row]
+            self.navigationController?.pushViewController(RLVC, animated: true)
+            
+        }
     }
     
     

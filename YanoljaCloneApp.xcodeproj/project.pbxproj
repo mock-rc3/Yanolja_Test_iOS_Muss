@@ -49,6 +49,10 @@
 		32685E8F2789D63B002389AF /* LoginMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E8E2789D63B002389AF /* LoginMain.swift */; };
 		32685E912789D647002389AF /* LoginEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E902789D647002389AF /* LoginEmail.swift */; };
 		32685E932789EA60002389AF /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E922789EA60002389AF /* LoginDataManager.swift */; };
+		326A6FE02792BF9C00675B5A /* SpecificRest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326A6FDF2792BF9C00675B5A /* SpecificRest.storyboard */; };
+		326A6FE22792C07100675B5A /* specificRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE12792C07100675B5A /* specificRestViewController.swift */; };
+		326A6FE72792C33800675B5A /* SpecificResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE62792C33800675B5A /* SpecificResponse.swift */; };
+		326A6FE92792C35100675B5A /* SpecificDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE82792C35100675B5A /* SpecificDataManager.swift */; };
 		3274064B278FCB7C00EAF9F9 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */; };
 		3274064D278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */; };
 		3274064F278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064E278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift */; };
@@ -60,6 +64,10 @@
 		32860ED8278F30B9005356BB /* AbroadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32860ED7278F30B9005356BB /* AbroadCollectionViewCell.swift */; };
 		3293C27727903DB000F4F892 /* RegionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293C27627903DB000F4F892 /* RegionDataManager.swift */; };
 		3293C27B27903DD100F4F892 /* RegionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293C27A27903DD100F4F892 /* RegionResponse.swift */; };
+		329930CC2793066400286C6F /* RestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329930CB2793066400286C6F /* RestTableViewCell.swift */; };
+		32C782042791018C0032FD13 /* RestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C782032791018C0032FD13 /* RestListViewController.swift */; };
+		32C782082791038A0032FD13 /* RestListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C782072791038A0032FD13 /* RestListTableViewCell.swift */; };
+		32C7820A27910BA70032FD13 /* RestListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7820927910BA70032FD13 /* RestListResponse.swift */; };
 		32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */; };
 		32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */; };
 		32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */; };
@@ -113,6 +121,10 @@
 		32685E8E2789D63B002389AF /* LoginMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMain.swift; sourceTree = "<group>"; };
 		32685E902789D647002389AF /* LoginEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmail.swift; sourceTree = "<group>"; };
 		32685E922789EA60002389AF /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		326A6FDF2792BF9C00675B5A /* SpecificRest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpecificRest.storyboard; sourceTree = "<group>"; };
+		326A6FE12792C07100675B5A /* specificRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = specificRestViewController.swift; sourceTree = "<group>"; };
+		326A6FE62792C33800675B5A /* SpecificResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificResponse.swift; sourceTree = "<group>"; };
+		326A6FE82792C35100675B5A /* SpecificDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDataManager.swift; sourceTree = "<group>"; };
 		3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeRegionTableViewCell.swift; sourceTree = "<group>"; };
 		3274064E278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRegionTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +136,10 @@
 		32860ED7278F30B9005356BB /* AbroadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbroadCollectionViewCell.swift; sourceTree = "<group>"; };
 		3293C27627903DB000F4F892 /* RegionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataManager.swift; sourceTree = "<group>"; };
 		3293C27A27903DD100F4F892 /* RegionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionResponse.swift; sourceTree = "<group>"; };
+		329930CB2793066400286C6F /* RestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTableViewCell.swift; sourceTree = "<group>"; };
+		32C782032791018C0032FD13 /* RestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestListViewController.swift; sourceTree = "<group>"; };
+		32C782072791038A0032FD13 /* RestListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestListTableViewCell.swift; sourceTree = "<group>"; };
+		32C7820927910BA70032FD13 /* RestListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestListResponse.swift; sourceTree = "<group>"; };
 		32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticViewController.swift; sourceTree = "<group>"; };
 		32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +234,7 @@
 				32685E4A27894AA3002389AF /* Main.storyboard */,
 				32685E87278978CF002389AF /* Account */,
 				32685E8427897864002389AF /* Network */,
+				326A6FDE2792BF5600675B5A /* SpeificRest */,
 				32685E832789783F002389AF /* MyPage */,
 				32685E8227897838002389AF /* Heart */,
 				32685E812789782A002389AF /* Peripheral */,
@@ -310,6 +327,8 @@
 				3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */,
 				3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */,
 				3274064E278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift */,
+				32C782032791018C0032FD13 /* RestListViewController.swift */,
+				32C782072791038A0032FD13 /* RestListTableViewCell.swift */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -342,6 +361,7 @@
 		32685E8427897864002389AF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				326A6FE32792C30D00675B5A /* SpecificRent */,
 				3293C27527903D9800F4F892 /* Region */,
 				3293C27427903D6C00F4F892 /* SignUpandLogIN */,
 			);
@@ -391,6 +411,41 @@
 			children = (
 				32685E922789EA60002389AF /* LoginDataManager.swift */,
 				325206FD278C3AD0008071FA /* SignInDataManager.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		326A6FDE2792BF5600675B5A /* SpeificRest */ = {
+			isa = PBXGroup;
+			children = (
+				326A6FDF2792BF9C00675B5A /* SpecificRest.storyboard */,
+				326A6FE12792C07100675B5A /* specificRestViewController.swift */,
+				329930CB2793066400286C6F /* RestTableViewCell.swift */,
+			);
+			path = SpeificRest;
+			sourceTree = "<group>";
+		};
+		326A6FE32792C30D00675B5A /* SpecificRent */ = {
+			isa = PBXGroup;
+			children = (
+				326A6FE42792C31E00675B5A /* Entity */,
+				326A6FE52792C32500675B5A /* Request */,
+			);
+			path = SpecificRent;
+			sourceTree = "<group>";
+		};
+		326A6FE42792C31E00675B5A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				326A6FE62792C33800675B5A /* SpecificResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		326A6FE52792C32500675B5A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				326A6FE82792C35100675B5A /* SpecificDataManager.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -454,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				3293C27A27903DD100F4F892 /* RegionResponse.swift */,
+				32C7820927910BA70032FD13 /* RestListResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -534,6 +590,7 @@
 				32685E8B2789791A002389AF /* Signin.storyboard in Resources */,
 				322256B0278A782D0090A0DF /* Peripheral.storyboard in Resources */,
 				32685E4E27894AA4002389AF /* Assets.xcassets in Resources */,
+				326A6FE02792BF9C00675B5A /* SpecificRest.storyboard in Resources */,
 				322256AE278A78220090A0DF /* Region.storyboard in Resources */,
 				322256B5278A784B0090A0DF /* MyPage.storyboard in Resources */,
 				32685E4C27894AA3002389AF /* Main.storyboard in Resources */,
@@ -592,8 +649,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				32685E4927894AA3002389AF /* ViewController.swift in Sources */,
+				329930CC2793066400286C6F /* RestTableViewCell.swift in Sources */,
 				32685E68278976F8002389AF /* UIColor.swift in Sources */,
+				326A6FE72792C33800675B5A /* SpecificResponse.swift in Sources */,
 				32685E6B278976F8002389AF /* UIViewController.swift in Sources */,
+				32C782082791038A0032FD13 /* RestListTableViewCell.swift in Sources */,
 				32860ED8278F30B9005356BB /* AbroadCollectionViewCell.swift in Sources */,
 				3293C27727903DB000F4F892 /* RegionDataManager.swift in Sources */,
 				3274064B278FCB7C00EAF9F9 /* RegionViewController.swift in Sources */,
@@ -609,11 +669,14 @@
 				32860ED6278ED423005356BB /* TransIconCollectionViewCell.swift in Sources */,
 				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
 				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
+				32C782042791018C0032FD13 /* RestListViewController.swift in Sources */,
+				326A6FE22792C07100675B5A /* specificRestViewController.swift in Sources */,
 				32860ED4278EA203005356BB /* SecondCollectionViewCell.swift in Sources */,
 				32DE3452278B347D00D2A055 /* SignInPWViewController.swift in Sources */,
 				32685E4527894AA3002389AF /* AppDelegate.swift in Sources */,
 				32520703278C89B9008071FA /* RecommendCollectionViewCell.swift in Sources */,
 				32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */,
+				326A6FE92792C35100675B5A /* SpecificDataManager.swift in Sources */,
 				32860ECB278E880D005356BB /* DomesticTableView.swift in Sources */,
 				32685E8F2789D63B002389AF /* LoginMain.swift in Sources */,
 				32DE3450278A8A3A00D2A055 /* ScrollandNavigation.swift in Sources */,
@@ -628,6 +691,7 @@
 				32685E7927897757002389AF /* Constant.swift in Sources */,
 				32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */,
 				32860ED0278EA1D6005356BB /* IconCollectionViewCell.swift in Sources */,
+				32C7820A27910BA70032FD13 /* RestListResponse.swift in Sources */,
 				32685E7A27897757002389AF /* Key.swift in Sources */,
 				32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */,
 				32DDF8B1278A841F004C1280 /* AbroadViewController.swift in Sources */,
