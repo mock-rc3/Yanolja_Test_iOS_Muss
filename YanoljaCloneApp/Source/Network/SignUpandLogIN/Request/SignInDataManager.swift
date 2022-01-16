@@ -13,9 +13,9 @@ class SignInDataManeger : UIViewController {
     //이메일 인증번호 요청
     func EmailAuthCheck(email: String, delegate: SignInViewController) {
         let url = "http://\(Constant.BASE_URL)"
-            + "/email-auth"
+            + "/auth/email"
         
-        let parameters = ["email" : email] as Dictionary
+        let parameters = ["authMethod" : email] as Dictionary
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
@@ -32,11 +32,14 @@ class SignInDataManeger : UIViewController {
     }
     
     //이메일 인증번호 응답
-    func EmailAuthNumCheck(authNum: String, delegate: SignInViewController) {
+    func EmailAuthNumCheck(authNum: String, email : String, delegate: SignInViewController) {
         let url = "http://\(Constant.BASE_URL)"
-            + "/email-confirm"
+            + "/auth/email-confirm"
         
-        let parameters = ["authNumber" : authNum] as Dictionary
+        let parameters : [String : String] = [
+            "authNumber" : authNum,
+            "authMethod" : email
+        ]
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
@@ -54,9 +57,9 @@ class SignInDataManeger : UIViewController {
     //핸드폰 인증번호 요청
     func PhoneAuthCheck(phoneNumber: String, delegate: SignInPHViewController) {
         let url = "http://\(Constant.BASE_URL)"
-            + "/phone-auth"
+            + "/auth/phone"
         
-        let parameters = ["phoneNumber" : phoneNumber] as Dictionary
+        let parameters = ["authMethod" : phoneNumber] as Dictionary
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
@@ -74,9 +77,14 @@ class SignInDataManeger : UIViewController {
     //핸드폰 인증번호 응답 - GET 방식
     func PhoneAuthNumCheck(authNum: String, phoneNumber: String, delegate: SignInPHViewController) {
         let url = "http://\(Constant.BASE_URL)"
-            + "/phone-confirm?phone_num=\(phoneNumber)&auth_num=\(authNum)"
+            + "/auth/phone-confirm"
         
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+        let parameters : [String : String] = [
+            "authMethod" : phoneNumber,
+            "authNumber" : authNum
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
             .responseDecodable(of: AuthResponse.self) { response in
                 switch response.result {

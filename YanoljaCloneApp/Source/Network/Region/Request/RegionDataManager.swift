@@ -32,7 +32,7 @@ class RegionDataManager : UIViewController{
     func RequestRestList(days : String, areadId : Int, delegate : RestListViewController) {
         
         let url = "http://\(Constant.BASE_URL)"
-            + "/area/:areadId/\(areadId)"
+            + "/area/\(areadId)"
             + "?days=\(days)"
         
         
@@ -45,7 +45,7 @@ class RegionDataManager : UIViewController{
                     delegate.didRetrieveHotelList(result: response)
                 case .failure(let error):
                     print(error)
-                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                    delegate.failedToRequest(message: "호텔 서버와의 연결이 원활하지 않습니다")
                 }
             }
         

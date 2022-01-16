@@ -19,6 +19,10 @@
 		32472086278D43FE009E4B8B /* DomesticCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */; };
 		32472088278D7F52009E4B8B /* SIgnInPHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */; };
 		3247208A278D8E24009E4B8B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472089278D8E24009E4B8B /* MyPageViewController.swift */; };
+		324F82DF27943E7200AD4739 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F82DE27943E7200AD4739 /* RoomViewController.swift */; };
+		324F82E3279446C500AD4739 /* timeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F82E2279446C500AD4739 /* timeSelectViewController.swift */; };
+		324F82E5279446D400AD4739 /* timeReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F82E4279446D400AD4739 /* timeReserveViewController.swift */; };
+		324F82E7279446E200AD4739 /* sleepReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F82E6279446E200AD4739 /* sleepReserveViewController.swift */; };
 		325206FE278C3AD0008071FA /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325206FD278C3AD0008071FA /* SignInDataManager.swift */; };
 		32520700278C3BE8008071FA /* LogInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325206FF278C3BE8008071FA /* LogInResponse.swift */; };
 		32520703278C89B9008071FA /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32520702278C89B9008071FA /* RecommendCollectionViewCell.swift */; };
@@ -50,7 +54,7 @@
 		32685E912789D647002389AF /* LoginEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E902789D647002389AF /* LoginEmail.swift */; };
 		32685E932789EA60002389AF /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32685E922789EA60002389AF /* LoginDataManager.swift */; };
 		326A6FE02792BF9C00675B5A /* SpecificRest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326A6FDF2792BF9C00675B5A /* SpecificRest.storyboard */; };
-		326A6FE22792C07100675B5A /* specificRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE12792C07100675B5A /* specificRestViewController.swift */; };
+		326A6FE22792C07100675B5A /* SpecificRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE12792C07100675B5A /* SpecificRestViewController.swift */; };
 		326A6FE72792C33800675B5A /* SpecificResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE62792C33800675B5A /* SpecificResponse.swift */; };
 		326A6FE92792C35100675B5A /* SpecificDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE82792C35100675B5A /* SpecificDataManager.swift */; };
 		3274064B278FCB7C00EAF9F9 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */; };
@@ -89,6 +93,10 @@
 		32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticCollectionViewCell.swift; sourceTree = "<group>"; };
 		32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPHViewController.swift; sourceTree = "<group>"; };
 		32472089278D8E24009E4B8B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		324F82DE27943E7200AD4739 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		324F82E2279446C500AD4739 /* timeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeSelectViewController.swift; sourceTree = "<group>"; };
+		324F82E4279446D400AD4739 /* timeReserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeReserveViewController.swift; sourceTree = "<group>"; };
+		324F82E6279446E200AD4739 /* sleepReserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepReserveViewController.swift; sourceTree = "<group>"; };
 		325206FD278C3AD0008071FA /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
 		325206FF278C3BE8008071FA /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
 		32520702278C89B9008071FA /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -122,7 +130,7 @@
 		32685E902789D647002389AF /* LoginEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmail.swift; sourceTree = "<group>"; };
 		32685E922789EA60002389AF /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		326A6FDF2792BF9C00675B5A /* SpecificRest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpecificRest.storyboard; sourceTree = "<group>"; };
-		326A6FE12792C07100675B5A /* specificRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = specificRestViewController.swift; sourceTree = "<group>"; };
+		326A6FE12792C07100675B5A /* SpecificRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificRestViewController.swift; sourceTree = "<group>"; };
 		326A6FE62792C33800675B5A /* SpecificResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificResponse.swift; sourceTree = "<group>"; };
 		326A6FE82792C35100675B5A /* SpecificDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDataManager.swift; sourceTree = "<group>"; };
 		3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +190,23 @@
 				32860ECA278E880D005356BB /* DomesticTableView.swift */,
 			);
 			path = Domestic;
+			sourceTree = "<group>";
+		};
+		324F82E02794467B00AD4739 /* timeReserve */ = {
+			isa = PBXGroup;
+			children = (
+				324F82E2279446C500AD4739 /* timeSelectViewController.swift */,
+				324F82E4279446D400AD4739 /* timeReserveViewController.swift */,
+			);
+			path = timeReserve;
+			sourceTree = "<group>";
+		};
+		324F82E12794467E00AD4739 /* sleepReserve */ = {
+			isa = PBXGroup;
+			children = (
+				324F82E6279446E200AD4739 /* sleepReserveViewController.swift */,
+			);
+			path = sleepReserve;
 			sourceTree = "<group>";
 		};
 		32520701278C898C008071FA /* Recommend */ = {
@@ -419,8 +444,11 @@
 			isa = PBXGroup;
 			children = (
 				326A6FDF2792BF9C00675B5A /* SpecificRest.storyboard */,
-				326A6FE12792C07100675B5A /* specificRestViewController.swift */,
+				326A6FE12792C07100675B5A /* SpecificRestViewController.swift */,
 				329930CB2793066400286C6F /* RestTableViewCell.swift */,
+				324F82DE27943E7200AD4739 /* RoomViewController.swift */,
+				324F82E12794467E00AD4739 /* sleepReserve */,
+				324F82E02794467B00AD4739 /* timeReserve */,
 			);
 			path = SpeificRest;
 			sourceTree = "<group>";
@@ -670,12 +698,15 @@
 				32685E7E27897757002389AF /* BaseViewController.swift in Sources */,
 				32685E6A278976F8002389AF /* UIButton.swift in Sources */,
 				32C782042791018C0032FD13 /* RestListViewController.swift in Sources */,
-				326A6FE22792C07100675B5A /* specificRestViewController.swift in Sources */,
+				326A6FE22792C07100675B5A /* SpecificRestViewController.swift in Sources */,
 				32860ED4278EA203005356BB /* SecondCollectionViewCell.swift in Sources */,
 				32DE3452278B347D00D2A055 /* SignInPWViewController.swift in Sources */,
 				32685E4527894AA3002389AF /* AppDelegate.swift in Sources */,
 				32520703278C89B9008071FA /* RecommendCollectionViewCell.swift in Sources */,
+				324F82E3279446C500AD4739 /* timeSelectViewController.swift in Sources */,
+				324F82E5279446D400AD4739 /* timeReserveViewController.swift in Sources */,
 				32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */,
+				324F82E7279446E200AD4739 /* sleepReserveViewController.swift in Sources */,
 				326A6FE92792C35100675B5A /* SpecificDataManager.swift in Sources */,
 				32860ECB278E880D005356BB /* DomesticTableView.swift in Sources */,
 				32685E8F2789D63B002389AF /* LoginMain.swift in Sources */,
@@ -687,6 +718,7 @@
 				3274064F278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift in Sources */,
 				32685E932789EA60002389AF /* LoginDataManager.swift in Sources */,
 				3293C27B27903DD100F4F892 /* RegionResponse.swift in Sources */,
+				324F82DF27943E7200AD4739 /* RoomViewController.swift in Sources */,
 				32685E69278976F8002389AF /* String.swift in Sources */,
 				32685E7927897757002389AF /* Constant.swift in Sources */,
 				32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */,

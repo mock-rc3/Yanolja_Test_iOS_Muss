@@ -65,12 +65,12 @@ class SignInViewController : BaseViewController {
         
     }
     
-    @objc func secondHandleTap(sender: UITapGestureRecognizer) {
+    @objc func secondHandleTap(sender: UITapGestureRecognizer) async {
         
         print("second tapped")
         
         if let check = AuthCodeEnter.text {
-            dataManager.EmailAuthNumCheck(authNum: check, delegate: self)
+            dataManager.EmailAuthNumCheck(authNum: check, email: emailInfo, delegate: self)
             self.showIndicator()
             
         } else {return}
@@ -108,7 +108,7 @@ class SignInViewController : BaseViewController {
     func authCodeCorrectForm() {
         
         if let authCode = AuthCodeEnter.text{
-            if authCode.count == 8{
+            if authCode.count == 4{
                 NextView.backgroundColor = UIColor(red: 1/255, green: 128/255, blue: 97/255, alpha: 1)
                 let secondTapGesture = UITapGestureRecognizer(target: self, action: #selector(secondHandleTap(sender:)))
                 NextView.addGestureRecognizer(secondTapGesture)

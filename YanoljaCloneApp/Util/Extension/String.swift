@@ -56,6 +56,16 @@ extension String {
         return self.replacingOccurrences(of: target, with: withString, options: .literal, range: nil)
     }
     
+    func strikeThrough() -> NSAttributedString {
+        let attributeString = NSMutableAttributedString(string: self)
+        attributeString.addAttribute(.strikethroughStyle,
+                                     value: NSUnderlineStyle.single.rawValue,
+                                     range: NSMakeRange(0,attributeString.length))
+        
+        return attributeString
+    }
+    
+    
     
     // MARK: comma
     // ex. "1234567890".insertComma == "1,234,567,890"

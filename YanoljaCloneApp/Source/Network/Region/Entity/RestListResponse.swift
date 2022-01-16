@@ -29,14 +29,14 @@ struct ListInfo : Decodable {
     var hotelName : String
     var locationMemo : String
     var rating : String?
-    var sumReview : String
+    var sumReview : String?
     var timePercent : Int
     var timeUse : String?
-    var timePrice : String
-    var timeSale : String
+    var timePrice : String?
+    var timeSale : String?
     var sleepPercent : Int
     var sleepStart : String?
-    var sleepPrice : String
-    var sleepSale : String
-    var event : String
+    var sleepPrice : String?
+    var sleepSale : String?
+    var event : String?
 }

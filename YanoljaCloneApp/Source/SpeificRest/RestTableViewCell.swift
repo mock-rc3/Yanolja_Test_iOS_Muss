@@ -15,9 +15,11 @@ class RestTableViewCell: UITableViewCell {
     @IBOutlet weak var roomMemo: UILabel!
     @IBOutlet weak var Personnel: UILabel!
     @IBOutlet weak var timeUse: UILabel!
+    @IBOutlet weak var timePercent: UILabel!
     @IBOutlet weak var timePrice: UILabel!
     @IBOutlet weak var timeSale: UILabel!
     @IBOutlet weak var sleepCheckin: UILabel!
+    @IBOutlet weak var sleepPercent: UILabel!
     @IBOutlet weak var sleepPrice: UILabel!
     @IBOutlet weak var sleepSale: UILabel!
     

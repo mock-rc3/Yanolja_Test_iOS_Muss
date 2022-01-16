@@ -14,7 +14,7 @@ class SpecificDataManager : UIViewController{
     func requestSpecificRestList(startDate : String, endDate : String, days : String, hotelId : Int, delegate : SpecificRestViewController) {
         
         let url = "http://\(Constant.BASE_URL)"
-            + "/hotel/:hotelId/\(hotelId)"
+            + "/hotel/\(hotelId)"
             + "?startDate=\(startDate)"
             + "&endDate=\(endDate)"
             + "&days=\(days)"

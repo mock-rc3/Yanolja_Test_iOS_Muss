@@ -32,6 +32,25 @@ class RestListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if let text = cellRentOriginalPrice.text {
+          let attributeString = NSMutableAttributedString(string: text)
+
+          attributeString.addAttribute(.strikethroughStyle,
+                                        value: NSUnderlineStyle.single.rawValue,
+                                        range: NSMakeRange(0, attributeString.length))
+
+            cellRentOriginalPrice.attributedText = attributeString
+        }
+        
+        if let text = cellSleepOriginalPrice.text {
+          let attributeString = NSMutableAttributedString(string: text)
+
+          attributeString.addAttribute(.strikethroughStyle,
+                                        value: NSUnderlineStyle.single.rawValue,
+                                        range: NSMakeRange(0, attributeString.length))
+
+            cellSleepOriginalPrice.attributedText = attributeString
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

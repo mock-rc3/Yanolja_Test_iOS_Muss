@@ -43,6 +43,8 @@ class RestListViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.isHidden = true
+        
         Location.layer.borderWidth = 1
         Location.layer.borderColor = UIColor.darkGray.cgColor
         Date.layer.borderWidth = 1
@@ -78,6 +80,11 @@ extension RestListViewController : UITableViewDelegate, UITableViewDataSource {
         
         let cell = RestListTable.dequeueReusableCell(withIdentifier: "restCell", for: indexPath) as! RestListTableViewCell
         
+        //셀 클릭했을 때 회색으로 안변하게
+        let background = UIView()
+        background.backgroundColor = .clear
+        cell.selectedBackgroundView = background
+        
         if let url = URL(string: cellImg[indexPath.row]) {
             let data =  try? Data(contentsOf: url)
             cell.cellImg.image = UIImage(data: data!)
@@ -88,25 +95,32 @@ extension RestListViewController : UITableViewDelegate, UITableViewDataSource {
         cell.cellRate.text = cellRate[indexPath.row]
         
         cell.cellRentOriginalPrice.text = "\(cellRentOriginalPrice[indexPath.row])원"
-        cell.cellRentDiscountRate.text = "\(cellRentDiscountRate[indexPath.row])~"
-        cell.cellRentPrice.text = "\(cellRentPrice[indexPath.row])원"
-        cell.cellRentTimeUse.text = cellRentTimeUse[indexPath.row]
+        cell.cellRentDiscountRate.text = "\(cellRentDiscountRate[indexPath.row])%~"
+        cell.cellRentPrice.text = "\(cellRentPrice[indexPath.row])"
+        cell.cellRentTimeUse.text = "\(cellRentTimeUse[indexPath.row])시간"
         
         cell.cellSleepStart.text = "\(cellSleepStart[indexPath.row])부터"
-        cell.cellSleepPrice.text = "\(cellSleepPrice[indexPath.row])원"
-        cell.cellSleepDiscountRate.text = "\(cellSleepDiscountRate[indexPath.row])~"
+        cell.cellSleepPrice.text = "\(cellSleepPrice[indexPath.row])"
+        cell.cellSleepDiscountRate.text = "\(cellSleepDiscountRate[indexPath.row])%~"
         cell.cellSleepOriginalPrice.text = "\(cellSleepOriginalPrice[indexPath.row])원"
         cell.cellEvent.text = cellEvent[indexPath.row]
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 503
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let NextPhase = UIStoryboard(name: "SpecificRest", bundle: nil).instantiateViewController(withIdentifier: "specificRest") as! SpecificRestViewController
+        let NextView = UIStoryboard(name: "SpecificRest", bundle: nil).instantiateViewController(withIdentifier: "specificRest")
         
 //        NextPhase.hotelId = self.hotelId[indexPath.row]
-        self.navigationController?.pushViewController(NextPhase, animated: true)
+        
+        NextView.modalPresentationStyle = .overCurrentContext
+        NextView.modalTransitionStyle = .coverVertical
+        self.present(NextView, animated: true)
     }
 
 }
@@ -128,24 +142,50 @@ extension RestListViewController {
                     self.cellRate.append("5.0")
                 }
                 
-                self.cellRentOriginalPrice.append(i.timePrice)
-                self.cellRentDiscountRate.append(i.timePercent)
-                if let rentTimeUse = i.timeUse {
-                    self.cellRentTimeUse.append(rentTimeUse)
+                if let timePrice = i.timePrice{
+                    self.cellRentOriginalPrice.append(timePrice)
                 } else{
-                    self.cellRentTimeUse.append("5시간")
+                    self.cellRentOriginalPrice.append("30,000")
                 }
-                self.cellRentPrice.append(i.timeSale)
                 
-                self.cellSleepPrice.append(i.sleepSale)
-                self.cellSleepOriginalPrice.append(i.sleepPrice)
+                self.cellRentDiscountRate.append(i.timePercent)
+                if let timeUse = i.timeUse {
+                    self.cellRentTimeUse.append(timeUse)
+                } else{
+                    self.cellRentTimeUse.append("5")
+                }
+                
+                if let timeSale = i.timeSale {
+                    self.cellRentPrice.append(timeSale)
+                } else{
+                    self.cellRentPrice.append("10,000")
+                }
+                
+                if let sleepSale = i.sleepSale {
+                    self.cellSleepPrice.append(sleepSale)
+                } else{
+                    self.cellSleepPrice.append("30,000")
+                }
+                
+                if let sleepPrice = i.sleepPrice{
+                    self.cellSleepOriginalPrice.append(sleepPrice)
+                }else{
+                    self.cellSleepOriginalPrice.append("70,000")
+                }
+                
                 if let sleepStart = i.sleepStart {
                     self.cellSleepStart.append(sleepStart)
                 } else {
                     self.cellSleepStart.append("22:00")
                 }
                 self.cellSleepDiscountRate.append(i.sleepPercent)
-                self.cellEvent.append(i.event)
+                
+                if let event = i.event{
+                    self.cellEvent.append(event)
+                } else{
+                    self.cellEvent.append("엄청난 이벤트")
+                }
+                
                 
             }
             

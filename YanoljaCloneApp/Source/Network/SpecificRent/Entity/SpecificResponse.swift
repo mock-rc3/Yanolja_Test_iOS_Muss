@@ -37,9 +37,11 @@ struct RoomList : Decodable{
     var minPersonnel : String
     var maxPersonnel : String
     var timeUse : String
+//    var timePercent : String
     var timePrice : String
     var timeSale : String
     var sleepCheckin : String
+//    var sleepPercent : String
     var sleepPrice : String
     var sleepSale : String
 }
@@ -57,13 +59,17 @@ struct resultConvenience : Decodable{
 
 // MARK: - ReviewList
 struct ReviewList : Decodable{
-    var reviewID, avgScore, nickname, roomName: String
-    var reviewContent, createDate: String
+    var reviewId : String
+    var avgScore : String?
+    var nickname : String
+    var roomName: String
+    var reviewContent : String?
+    var createDate: String
 }
 
 // MARK: - ReviewReply
 struct ReviewReply : Decodable{
-    var reviewID, replyContent, createDate: String
+    var reviewId, replyContent, createDate: String
 }
 
 // MARK: - ReviewScore
