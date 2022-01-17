@@ -14,16 +14,17 @@ class SpecificRestViewController : BaseViewController {
     var hotelId : Int = 0
     
     var roomName : Array<String> = []
+    var roomImg : Array<String> = []
     var roomMemo : Array<String> = []
     var roomId : Array<Int> = []
     var minPersonnel : Array<String> = []
     var maxPersonnel : Array<String> = []
-    var timePercent : Array<String> = []
+    var timePercent : Array<Int> = []
     var timeUse : Array<String> = []
     var timePrice : Array<String> = []
     var timeSale : Array<String> = []
     var sleepCheckin : Array<String> = []
-    var sleepPercent : Array<String> = []
+    var sleepPercent : Array<Int> = []
     var sleepPrice : Array<String> = []
     var sleepSale : Array<String> = []
     
@@ -49,7 +50,7 @@ class SpecificRestViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: self.hotelId, delegate: self)
+        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: 1, delegate: self)
         self.showIndicator()
         
         view1.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.emailBlue, width: 1)
@@ -77,14 +78,18 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
         let cell = restListTableView.dequeueReusableCell(withIdentifier: "restSpecificCell", for: indexPath) as! RestTableViewCell
         
         cell.roomName.text = roomName[indexPath.row]
+        if let url = URL(string: roomImg[indexPath.row]) {
+            let data = try? Data(contentsOf: url)
+            cell.cellImg.image = UIImage(data: data!)
+        }
         cell.roomMemo.text = roomMemo[indexPath.row]
         cell.Personnel.text = "기준 \(minPersonnel[indexPath.row])명 / 최대 \(maxPersonnel[indexPath.row])명"
         cell.timeUse.text = "최대 \(timeUse[indexPath.row])시간"
-//        cell.timePercent.text = "\(timePercent[indexPath.row])%"
+        cell.timePercent.text = "\(timePercent[indexPath.row])%"
         cell.timePrice.text = "\(timePrice[indexPath.row])원"
         cell.timeSale.text = "\(timeSale[indexPath.row])원"
-//        cell.sleepCheckin.text = "\(sleepCheckin[indexPath.row][0...1]):\(sleepCheckin.text[indexPath.row][2...3])부터"
-//        cell.sleepPercent.text = "\(sleepPercent[indexPath.row])%"
+        cell.sleepCheckin.text = "\(sleepCheckin[indexPath.row])부터"
+        cell.sleepPercent.text = "\(sleepPercent[indexPath.row])%"
         cell.sleepSale.text = "\(sleepSale[indexPath.row])원"
         cell.sleepPrice.text = "\(sleepPrice[indexPath.row])원"
         
@@ -109,6 +114,8 @@ extension SpecificRestViewController {
             if let url = URL(string: result.result.hotelImg[0]){
                 let data = try? Data(contentsOf: url)
                 mainImg.image = UIImage(data: data!)
+            } else {
+                print("이미지를 불러올 수 없습니다.")
             }
             HotelTitle.text = result.result.hotelInfo.hotelName
             HotelRate.text = result.result.hotelInfo.rating
@@ -117,15 +124,16 @@ extension SpecificRestViewController {
             for i in result.result.roomList {
                 roomId.append(i.roomId)
                 roomName.append(i.roomName)
+                roomImg.append(i.roomImg)
                 roomMemo.append(i.roomMemo)
                 minPersonnel.append(i.minPersonnel)
                 maxPersonnel.append(i.maxPersonnel)
-//                timePercent.append(i.timePercent)
+                timePercent.append(i.timePercent)
                 timeUse.append(i.timeUse)
                 timeSale.append(i.timeSale)
                 timePrice.append(i.timePrice)
                 sleepCheckin.append(i.sleepCheckin)
-//                sleepPercent.append(i.sleepPercent)
+                sleepPercent.append(i.sleepPercent)
                 sleepSale.append(i.sleepSale)
                 sleepPrice.append(i.sleepPrice)
             }

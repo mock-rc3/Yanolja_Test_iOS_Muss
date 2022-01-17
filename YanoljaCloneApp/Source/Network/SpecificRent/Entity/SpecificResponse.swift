@@ -33,16 +33,17 @@ struct HotelInfo : Decodable{
 
 struct RoomList : Decodable{
     var roomId : Int
+    var roomImg : String
     var roomName : String
     var roomMemo : String
     var minPersonnel : String
     var maxPersonnel : String
     var timeUse : String
-//    var timePercent : String
+    var timePercent : Int
     var timePrice : String
     var timeSale : String
     var sleepCheckin : String
-//    var sleepPercent : String
+    var sleepPercent : Int
     var sleepPrice : String
     var sleepSale : String
 }
