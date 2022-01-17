@@ -15,6 +15,10 @@ import Alamofire
 
 class LoginDataManager : UIViewController {
     
+    var accessToken : String?
+    var refreshToken : String?
+    
+    
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
     func KakaoLogin() {
@@ -28,7 +32,8 @@ class LoginDataManager : UIViewController {
                _ = oauthToken
                
                // 엑세스토큰
-               let accessToken = oauthToken?.accessToken
+               self.accessToken = oauthToken?.accessToken
+               self.refreshToken = oauthToken?.refreshToken
                
                //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
                self.getKakaoInfo()
@@ -36,6 +41,32 @@ class LoginDataManager : UIViewController {
         }
     }
     
+    
+    //인가토큰 및 리프레쉬토큰 서버에 전달
+    func sendKakaoInfo(auth : String, refresh : String) {
+        let url = "http://\(Constant.BASE_URL)"
+            + "/login/kakao"
+            + "?auth=\(auth)"
+            + "&refresh=\(refresh)"
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: SignUpAndLogIn.self) { response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess{
+                        let NextPhase = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
+                        
+                        self.present(NextPhase, animated: true)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        
+        
+    }
+
     func getKakaoInfo() {
         //사용자 관리 api 호출
         UserApi.shared.me() {(user, error) in
@@ -62,7 +93,9 @@ class LoginDataManager : UIViewController {
                 }
                 
                 //마이페이지 화면으로 전환
-                
+                if let access = self.accessToken, let refresh = self.refreshToken {
+                    self.sendKakaoInfo(auth: access, refresh: refresh)
+                }
                 
             }
         }
@@ -71,6 +104,28 @@ class LoginDataManager : UIViewController {
     func NaverLogin() {
         loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
+    }
+    
+    func sendNaverInfo(auth : String, refresh : String) {
+        let url = "http://\(Constant.BASE_URL)"
+            + "/login/naver"
+            + "?auth=\(auth)"
+            + "&refresh=\(refresh)"
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: SignUpAndLogIn.self) { response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess{
+                        let NextPhase = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
+                        
+                        self.present(NextPhase, animated: true)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
     
     func getNaverInfo() {
@@ -82,6 +137,7 @@ class LoginDataManager : UIViewController {
         
         guard let tokenType = loginInstance?.tokenType else { return }
         guard let accessToken = loginInstance?.accessToken else { return }
+        guard let refreshToken = loginInstance?.refreshToken else { return }
         let urlStr = "https://openapi.naver.com/v1/nid/me"
         let url = URL(string: urlStr)!
         
@@ -96,6 +152,8 @@ class LoginDataManager : UIViewController {
         
             Constant.ud.set(name, forKey: "name")
             Constant.ud.set(true, forKey: "loginCheck")
+            
+            self.sendNaverInfo(auth: accessToken, refresh: refreshToken)
         }
     }
     

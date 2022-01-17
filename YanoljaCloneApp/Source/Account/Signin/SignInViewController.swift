@@ -74,11 +74,8 @@ class SignInViewController : BaseViewController {
             self.showIndicator()
             
         } else {return}
-        
     }
     
-    
-
     override func viewWillAppear(_ animated: Bool) {
         self.EmailTextField.becomeFirstResponder()
     }
@@ -101,7 +98,6 @@ class SignInViewController : BaseViewController {
         
         AuthCodeTransmitLabel.textColor = .black
         AuthCodeTransmitLabel.text = "인증번호 재전송 (남은 횟수 \(sentCount)회)"
-        
     }
     
     //인증번호 제대로 적었는지 확인
@@ -120,7 +116,6 @@ class SignInViewController : BaseViewController {
             }
         }
     }
-    
 }
 
 

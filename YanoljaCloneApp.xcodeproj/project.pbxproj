@@ -72,6 +72,7 @@
 		32C782042791018C0032FD13 /* RestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C782032791018C0032FD13 /* RestListViewController.swift */; };
 		32C782082791038A0032FD13 /* RestListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C782072791038A0032FD13 /* RestListTableViewCell.swift */; };
 		32C7820A27910BA70032FD13 /* RestListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7820927910BA70032FD13 /* RestListResponse.swift */; };
+		32D177C32794F83400545570 /* RoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D177C22794F83300545570 /* RoomResponse.swift */; };
 		32DDF8A9278A83B2004C1280 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */; };
 		32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */; };
 		32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */; };
@@ -148,6 +149,7 @@
 		32C782032791018C0032FD13 /* RestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestListViewController.swift; sourceTree = "<group>"; };
 		32C782072791038A0032FD13 /* RestListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestListTableViewCell.swift; sourceTree = "<group>"; };
 		32C7820927910BA70032FD13 /* RestListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestListResponse.swift; sourceTree = "<group>"; };
+		32D177C22794F83300545570 /* RoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomResponse.swift; sourceTree = "<group>"; };
 		32DDF8A8278A83B2004C1280 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		32DDF8AA278A83EC004C1280 /* DomesticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticViewController.swift; sourceTree = "<group>"; };
 		32DDF8AC278A8401004C1280 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
@@ -257,8 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				32685E4A27894AA3002389AF /* Main.storyboard */,
-				32685E87278978CF002389AF /* Account */,
 				32685E8427897864002389AF /* Network */,
+				32685E87278978CF002389AF /* Account */,
 				326A6FDE2792BF5600675B5A /* SpeificRest */,
 				32685E832789783F002389AF /* MyPage */,
 				32685E8227897838002389AF /* Heart */,
@@ -466,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				326A6FE62792C33800675B5A /* SpecificResponse.swift */,
+				32D177C22794F83300545570 /* RoomResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				32685E68278976F8002389AF /* UIColor.swift in Sources */,
 				326A6FE72792C33800675B5A /* SpecificResponse.swift in Sources */,
 				32685E6B278976F8002389AF /* UIViewController.swift in Sources */,
+				32D177C32794F83400545570 /* RoomResponse.swift in Sources */,
 				32C782082791038A0032FD13 /* RestListTableViewCell.swift in Sources */,
 				32860ED8278F30B9005356BB /* AbroadCollectionViewCell.swift in Sources */,
 				3293C27727903DB000F4F892 /* RegionDataManager.swift in Sources */,

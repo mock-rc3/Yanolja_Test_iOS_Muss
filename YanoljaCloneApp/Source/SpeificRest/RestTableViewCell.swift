@@ -29,6 +29,25 @@ class RestTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        if let text = timePrice.text {
+          let attributeString = NSMutableAttributedString(string: text)
+
+          attributeString.addAttribute(.strikethroughStyle,
+                                        value: NSUnderlineStyle.single.rawValue,
+                                        range: NSMakeRange(0, attributeString.length))
+
+            timePrice.attributedText = attributeString
+        }
+        
+        if let text = sleepPrice.text {
+          let attributeString = NSMutableAttributedString(string: text)
+
+          attributeString.addAttribute(.strikethroughStyle,
+                                        value: NSUnderlineStyle.single.rawValue,
+                                        range: NSMakeRange(0, attributeString.length))
+
+            sleepPrice.attributedText = attributeString
+        }
         
         
     }

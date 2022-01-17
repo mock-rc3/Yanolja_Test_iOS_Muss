@@ -90,9 +90,12 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        return 0
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let NextPhase = self.storyboard?.instantiateViewController(withIdentifier: "roomView") as! RoomViewController
+
+        self.navigationController?.pushViewController(NextPhase, animated: true)
+        
+    }
 }
 
 extension SpecificRestViewController {
