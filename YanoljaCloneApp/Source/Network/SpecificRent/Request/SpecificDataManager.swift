@@ -35,7 +35,7 @@ class SpecificDataManager : UIViewController{
         
     }
     
-    func requestSpecificRoomList(startDate : String, endDate : String, days : String, hotelId : Int, roomId : String, delegate : RoomViewController) {
+    func requestSpecificRoomList(startDate : String, endDate : String, days : String, hotelId : Int, roomId : Int, delegate : RoomViewController) {
         
         let url = "http://\(Constant.BASE_URL)"
             + "/hotel/\(hotelId)"

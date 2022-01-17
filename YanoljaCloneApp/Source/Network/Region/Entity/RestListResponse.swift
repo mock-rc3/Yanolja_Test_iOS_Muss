@@ -24,7 +24,7 @@ struct LocationInfo : Decodable {
     var personnel : String
 }
 struct ListInfo : Decodable {
-    var hotelId : String
+    var hotelId : Int
     var imgUrl : String
     var hotelName : String
     var locationMemo : String

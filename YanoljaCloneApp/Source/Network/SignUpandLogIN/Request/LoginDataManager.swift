@@ -32,8 +32,22 @@ class LoginDataManager : UIViewController {
                _ = oauthToken
                
                // 엑세스토큰
-               self.accessToken = oauthToken?.accessToken
-               self.refreshToken = oauthToken?.refreshToken
+               
+               if let access = oauthToken?.accessToken, let refresh = oauthToken?.refreshToken{
+                   
+                   print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                   print(access)
+                   print(refresh)
+                   
+                   self.accessToken = access
+                   self.refreshToken = refresh
+                   
+               } else {
+                   print("토큰 값이 존재하지 않습니다")
+                   return
+               }
+               
+               
                
                //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
                self.getKakaoInfo()
@@ -46,15 +60,21 @@ class LoginDataManager : UIViewController {
     func sendKakaoInfo(auth : String, refresh : String) {
         let url = "http://\(Constant.BASE_URL)"
             + "/login/kakao"
-            + "?auth=\(auth)"
-            + "&refresh=\(refresh)"
         
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+        let parameters : [String : String] = [
+            
+            "accessToken" : auth,
+            "refreshToken" : refresh
+        ]
+        
+        AF.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
             .responseDecodable(of: SignUpAndLogIn.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess{
+                        
+                        print(response.message)
                         let NextPhase = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
                         
                         self.present(NextPhase, animated: true)
@@ -109,15 +129,21 @@ class LoginDataManager : UIViewController {
     func sendNaverInfo(auth : String, refresh : String) {
         let url = "http://\(Constant.BASE_URL)"
             + "/login/naver"
-            + "?auth=\(auth)"
-            + "&refresh=\(refresh)"
         
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+        let parameters : [String : String] = [
+            
+            "accessToken" : auth,
+            "refreshToken" : refresh
+        ]
+        
+        AF.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
             .responseDecodable(of: SignUpAndLogIn.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess{
+                        
+                        print(response.message)
                         let NextPhase = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
                         
                         self.present(NextPhase, animated: true)

@@ -11,7 +11,7 @@
         <!--Specific Rest View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="SpecificRestViewController" customModule="YanoljaCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="specificList" id="Y6W-OH-hqX" customClass="SpecificRestViewController" customModule="YanoljaCloneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -620,6 +620,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d4z-q5-Nhc">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="UH6-iO-BmB">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JUX-4h-Fbb">
+                                <rect key="frame" x="20" y="6.5" width="92" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="IMG_B4EED6C52BD8-1" imageContentMode="scaleAspectFit"/>
+                                </buttonConfiguration>
+                            </button>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="pE3-Xa-hhm">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ot5-h6-54e">
@@ -835,7 +845,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="aBh-y4-hYe" firstAttribute="bottom" secondItem="b0g-HY-2zy" secondAttribute="bottom" id="4dR-De-aQG"/>
                                                     <constraint firstItem="5Su-sQ-fdG" firstAttribute="leading" secondItem="2pR-tm-FdE" secondAttribute="leading" constant="20" id="7aD-Te-mZ7"/>
@@ -932,7 +942,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="p7K-6t-2p8" firstAttribute="leading" secondItem="Vkl-sg-Zcb" secondAttribute="leading" id="0gy-Er-99l"/>
                                                     <constraint firstItem="p7K-6t-2p8" firstAttribute="top" secondItem="dVV-Ku-1ip" secondAttribute="bottom" constant="5" id="0i8-h6-qJr"/>
@@ -1607,7 +1617,21 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <navigationItem title="숙박 예약" id="sZh-8I-Efj"/>
+                                    <navigationItem title="숙박 예약" id="sZh-8I-Efj">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="xrg-rO-7bu">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="iAG-E3-0c1">
+                                                <rect key="frame" x="20" y="5" width="92" height="34.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="IMG_B4EED6C52BD8-1" imageContentMode="scaleAspectFit"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="dismiss:" destination="BCJ-6V-0G3" eventType="touchUpInside" id="h9y-dv-zRJ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-4s-HCj">
@@ -1730,7 +1754,7 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.01.16(일)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTx-kc-kyV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.01.15(토)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTx-kc-kyV">
                                         <rect key="frame" x="18.5" y="46" width="107" height="18"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -2452,6 +2476,20 @@
                             <constraint firstItem="jqb-cr-i2j" firstAttribute="leading" secondItem="nhu-Hh-fVw" secondAttribute="leading" id="zAM-hs-bbr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="basketView" destination="wKY-Fa-odk" id="sv6-Ks-rck"/>
+                        <outlet property="bottomBar" destination="D2O-4s-HCj" id="FG7-vz-r46"/>
+                        <outlet property="cancelView" destination="8k3-zM-0gI" id="Ryp-XO-gHh"/>
+                        <outlet property="reserveView" destination="yei-b3-lLJ" id="vt9-H0-YR0"/>
+                        <outlet property="roomLimit" destination="2sY-wv-cOc" id="lFG-9O-K7E"/>
+                        <outlet property="roomName" destination="nhu-Hh-fVw" id="mWE-ZA-Jui"/>
+                        <outlet property="sleepPrice" destination="N2m-fH-Ygg" id="8wC-wg-T3e"/>
+                        <outlet property="timeCheckIn" destination="XSy-jF-DbC" id="H3E-LW-8ct"/>
+                        <outlet property="timeCheckOut" destination="tkI-7G-2DW" id="9ll-NH-LP0"/>
+                        <outlet property="timeDate" destination="xTx-kc-kyV" id="viU-tm-lEq"/>
+                        <outlet property="timeDate2" destination="QHU-Az-bPG" id="5SY-WW-5jH"/>
+                        <outlet property="timeView" destination="nBk-QC-TMf" id="XN2-Lp-NRc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynO-Jt-AGC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2481,6 +2519,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="IMG_B4EED6C52BD8-1" imageContentMode="scaleAspectFit"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="dismiss:" destination="wMz-gv-xcc" eventType="touchUpInside" id="hpS-ch-vRD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:00~18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7D-rW-Ks4">
                                 <rect key="frame" x="20" y="133" width="108" height="23"/>
@@ -2541,6 +2582,15 @@
                             <constraint firstItem="WqX-Vv-VP6" firstAttribute="leading" secondItem="x7D-rW-Ks4" secondAttribute="leading" id="uLl-QO-k7G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Five" destination="1u0-KM-c71" id="uyR-Dn-hAG"/>
+                        <outlet property="Four" destination="O3g-4b-mBe" id="ICN-qJ-jBL"/>
+                        <outlet property="One" destination="x7D-rW-Ks4" id="ZSl-U8-4HQ"/>
+                        <outlet property="Six" destination="XHG-ax-P9J" id="vOR-er-bVn"/>
+                        <outlet property="Three" destination="WqX-Vv-VP6" id="67t-P7-WQb"/>
+                        <outlet property="Two" destination="bYg-GB-KkE" id="92W-Yj-1gq"/>
+                        <outlet property="dismiss" destination="0OC-r0-tJB" id="Aka-9u-5zG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6el-Eb-s5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2559,6 +2609,20 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="대실 예약" id="VAx-mO-dlD">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="nqa-28-gfw">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lYS-LR-AmU">
+                                                <rect key="frame" x="20" y="5" width="92" height="34.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="IMG_B4EED6C52BD8-1" imageContentMode="scaleAspectFit"/>
+                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="dismiss:" destination="TZm-Pd-Mbt" eventType="touchUpInside" id="Tek-3D-eiC"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="Nt0-bz-jZ0">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="m3S-aW-OXi">
                                                 <rect key="frame" x="302" y="5" width="92" height="34.5"/>
@@ -2609,7 +2673,7 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.01.16(일)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-eb-Gza">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.01.15(토)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-eb-Gza">
                                         <rect key="frame" x="243" y="46" width="107" height="18"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -2627,7 +2691,7 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.01.16(일)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-zu-cxx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.01.15(토)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-zu-cxx">
                                         <rect key="frame" x="18.5" y="46" width="107" height="18"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -3433,6 +3497,20 @@
                             <constraint firstItem="179-g7-cUB" firstAttribute="top" secondItem="72t-Ig-81D" secondAttribute="bottom" constant="8" id="x85-22-a1M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="basketView" destination="tu9-Nq-Ms1" id="jJ3-id-7VH"/>
+                        <outlet property="bottomBar" destination="oHj-0o-O2k" id="qa8-lk-dIB"/>
+                        <outlet property="cancelView" destination="mIa-SG-l4T" id="CVX-Q7-Yxu"/>
+                        <outlet property="reserveView" destination="Xnn-23-H9N" id="8zZ-6B-b8b"/>
+                        <outlet property="roomLimit" destination="72t-Ig-81D" id="7Sm-c0-rpC"/>
+                        <outlet property="roomName" destination="FC7-Dn-3hE" id="cuJ-sF-yfv"/>
+                        <outlet property="timeCheckIn" destination="LOB-zR-p4K" id="gHN-Do-Vtl"/>
+                        <outlet property="timeCheckOut" destination="gM3-Yw-5Tj" id="2Aa-ac-e6n"/>
+                        <outlet property="timeDate" destination="Iix-zu-cxx" id="ZJH-oa-rTO"/>
+                        <outlet property="timeDate2" destination="Pwz-eb-Gza" id="nBw-h2-0r1"/>
+                        <outlet property="timePrice" destination="Qka-cz-NdL" id="YCh-30-34k"/>
+                        <outlet property="timeView" destination="QBd-uE-bxt" id="R1O-sw-Bea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGJ-oq-txA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

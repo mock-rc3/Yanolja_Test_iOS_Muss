@@ -59,6 +59,8 @@ extension RegionViewController : UITableViewDelegate, UITableViewDataSource{
             let RLVC = self.storyboard?.instantiateViewController(withIdentifier: "restListView") as! RestListViewController
             
             RLVC.areaId = indexPath.row + 1
+            print(subArea)
+            
             RLVC.SpecificLocation = subArea[indexPath.row]
             self.navigationController?.pushViewController(RLVC, animated: true)
             

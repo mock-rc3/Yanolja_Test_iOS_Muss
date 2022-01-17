@@ -15,6 +15,7 @@ class SpecificRestViewController : BaseViewController {
     
     var roomName : Array<String> = []
     var roomMemo : Array<String> = []
+    var roomId : Array<Int> = []
     var minPersonnel : Array<String> = []
     var maxPersonnel : Array<String> = []
     var timePercent : Array<String> = []
@@ -48,7 +49,7 @@ class SpecificRestViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataManager.requestSpecificRestList(startDate: "2022-01-09", endDate: "2022-01-10", days: "weekend", hotelId: 1, delegate: self)
+        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: self.hotelId, delegate: self)
         self.showIndicator()
         
         view1.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.emailBlue, width: 1)
@@ -92,7 +93,9 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let NextPhase = self.storyboard?.instantiateViewController(withIdentifier: "roomView") as! RoomViewController
-
+        NextPhase.roomId = roomId[indexPath.row]
+        NextPhase.hotelId = self.hotelId
+        
         self.navigationController?.pushViewController(NextPhase, animated: true)
         
     }
@@ -112,6 +115,7 @@ extension SpecificRestViewController {
             locationMemo.text = result.result.hotelInfo.locationMemo
             
             for i in result.result.roomList {
+                roomId.append(i.roomId)
                 roomName.append(i.roomName)
                 roomMemo.append(i.roomMemo)
                 minPersonnel.append(i.minPersonnel)

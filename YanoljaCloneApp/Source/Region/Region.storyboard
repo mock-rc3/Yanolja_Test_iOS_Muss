@@ -200,7 +200,7 @@
                                             <constraint firstAttribute="width" constant="17" id="zzY-eS-OX9"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01.13~01.14•2명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-r9-6G7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01.15~01.16•2명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-r9-6G7">
                                         <rect key="frame" x="30" y="12" width="121" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -541,11 +541,6 @@
             <point key="canvasLocation" x="47.826086956521742" y="109.82142857142857"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="z44-gT-Sbb">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="IMG_6608-1" width="42" height="49"/>
         <image name="IMG_B4EED6C52BD8-1" width="41" height="43"/>

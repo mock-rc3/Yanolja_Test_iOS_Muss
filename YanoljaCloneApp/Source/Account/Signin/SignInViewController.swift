@@ -141,7 +141,7 @@ extension SignInViewController {
                 AuthCodeTransmit.removeGestureRecognizer(tapGesture)
             }
         default:
-            message = "이메일을 다시 입력하세요."
+            message = result.message
             self.presentAlert(title: message)
         }
     }

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class RestListViewController : BaseViewController {
     
@@ -15,7 +16,7 @@ class RestListViewController : BaseViewController {
     var SpecificLocation : String = ""
     var areaId : Int = 0
     
-    var  hotelId : Array<String> = []
+    var hotelId : Array<Int> = []
     
     var cellImg : Array<String> = []
     var cellLocation : Array<String> = []
@@ -50,6 +51,10 @@ class RestListViewController : BaseViewController {
         Date.layer.borderWidth = 1
         Date.layer.borderColor = UIColor.darkGray.cgColor
         
+        
+        LocationTitle.text = SpecificLocation
+        
+        //days -> weekend로 고정.
         dataManager.RequestRestList(days: "weekend", areadId: areaId, delegate: self)
         self.showIndicator()
         
@@ -116,10 +121,10 @@ extension RestListViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let NextView = UIStoryboard(name: "SpecificRest", bundle: nil).instantiateViewController(withIdentifier: "specificRest")
         
-//        NextPhase.hotelId = self.hotelId[indexPath.row]
+        let SRVC = UIStoryboard(name: "SpecificRest", bundle: nil).instantiateViewController(withIdentifier: "specificList") as! SpecificRestViewController
         
-        NextView.modalPresentationStyle = .overCurrentContext
-        NextView.modalTransitionStyle = .coverVertical
+        SRVC.hotelId = self.hotelId[indexPath.row]
+        
         self.present(NextView, animated: true)
     }
 

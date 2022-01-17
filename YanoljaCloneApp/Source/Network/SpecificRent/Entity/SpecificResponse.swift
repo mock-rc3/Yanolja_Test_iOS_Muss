@@ -32,6 +32,7 @@ struct HotelInfo : Decodable{
 }
 
 struct RoomList : Decodable{
+    var roomId : Int
     var roomName : String
     var roomMemo : String
     var minPersonnel : String
