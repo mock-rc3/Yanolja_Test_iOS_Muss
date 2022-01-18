@@ -55,11 +55,11 @@ class RecommendationViewController : ScrollandNavigation{
         
         
         Price1.layer.masksToBounds = true
-        Price1.layer.cornerRadius = 15
+        Price1.layer.cornerRadius = 10
         Price2.layer.masksToBounds = true
-        Price2.layer.cornerRadius = 15
+        Price2.layer.cornerRadius = 10
         Price3.layer.masksToBounds = true
-        Price3.layer.cornerRadius = 15
+        Price3.layer.cornerRadius = 10
         
         
     }

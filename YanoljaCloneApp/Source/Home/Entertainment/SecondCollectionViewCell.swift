@@ -14,5 +14,7 @@ class SecondCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var CellDiscountRate: UILabel!
     @IBOutlet weak var CellCost: UILabel!
     
-    
+    override func awakeFromNib() {
+        CellImg.layer.cornerRadius = 10
+    }
 }

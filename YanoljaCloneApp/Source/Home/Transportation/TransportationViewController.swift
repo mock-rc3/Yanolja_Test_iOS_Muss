@@ -47,14 +47,14 @@ class TransportationViewController : BaseViewController{
         PageControl.currentPageIndicatorTintColor = UIColor.black
         BannerImg.image = UIImage(named: images[0])
         
-        Weekend1.layer.cornerRadius = 15
-        Weekend2.layer.cornerRadius = 15
-        Weekend3.layer.cornerRadius = 15
+        Weekend1.layer.cornerRadius = 10
+        Weekend2.layer.cornerRadius = 10
+        Weekend3.layer.cornerRadius = 10
         
-        Where1.layer.cornerRadius = 15
-        Where2.layer.cornerRadius = 15
-        Where3.layer.cornerRadius = 15
-        Where4.layer.cornerRadius = 15
+        Where1.layer.cornerRadius = 10
+        Where2.layer.cornerRadius = 10
+        Where3.layer.cornerRadius = 10
+        Where4.layer.cornerRadius = 10
         
         
         self.TransIconCollectionView.delegate = self

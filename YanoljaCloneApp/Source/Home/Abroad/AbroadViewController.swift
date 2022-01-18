@@ -30,14 +30,14 @@ class AbroadViewController : BaseViewController{
         super.viewDidLoad()
         
         
-        Abroad1.layer.cornerRadius = 15
-        Abroad2.layer.cornerRadius = 15
-        Abroad3.layer.cornerRadius = 15
-        Abroad4.layer.cornerRadius = 15
-        Abroad5.layer.cornerRadius = 15
-        Abroad6.layer.cornerRadius = 15
-        Abroad7.layer.cornerRadius = 15
-        Abroad8.layer.cornerRadius = 15
+        Abroad1.layer.cornerRadius = 10
+        Abroad2.layer.cornerRadius = 10
+        Abroad3.layer.cornerRadius = 10
+        Abroad4.layer.cornerRadius = 10
+        Abroad5.layer.cornerRadius = 10
+        Abroad6.layer.cornerRadius = 10
+        Abroad7.layer.cornerRadius = 10
+        Abroad8.layer.cornerRadius = 10
         
         
         self.AbroadCollectionView.delegate = self

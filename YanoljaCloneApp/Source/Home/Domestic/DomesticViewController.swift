@@ -14,6 +14,13 @@ class DomesticViewController : BaseViewController {
     
     var IconTitle = ["모텔", "호텔", "프리미엄호텔", "펜션&풀빌라", "프리미엄펜션", "리조트", "글램핑&캠핑", "게하&한옥", "호캉스패키지", "스파펜션", "부티크브랜드", "QR체크인", "야놀자케어", "대실할인", "얼리버드특가", "지역여행혜택", "부산", "제주도", "Top랭킹", "더보기"]
     
+    var tableImg : Array<String> = ["테이블뷰1", "테이블뷰2", "테이블뷰3"]
+    var tableTitle : Array<String> = ["잠실(가락) 캘리포니아 호텔", "잠실(가락) XYM", "신천(잠실새내) FORESTAR 1,2호점"]
+    var tableRate : Array<Double> = [4.2, 4.5, 4.3]
+    var tableReviewCount : Array<String> = ["4.2 (111)", "4.5 (1235)", "4.3 (8892)"]
+    var tablePercent : Array<String> = ["29%", "12%", "16%"]
+    var tablePrice : Array<String> = ["70,000원", "70,000원", "50,000원"]
+    
     
     @IBOutlet weak var IconCollectionView: UICollectionView!
     @IBOutlet weak var DomesticCollectionView: UICollectionView!
@@ -135,6 +142,7 @@ extension DomesticViewController : UICollectionViewDataSource {
         
         if collectionView == IconCollectionView {
             return IconTitle.count
+            
         } else {
             return 0
         }
@@ -166,16 +174,26 @@ extension DomesticViewController : UICollectionViewDataSource {
 extension DomesticViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = DomesticTableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath)
+        let cell = DomesticTableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath) as! DomesticTableViewCell
+        
+        cell.selectionStyle = .none
+        
+        cell.RestImg.image = UIImage(named: tableImg[indexPath.row])
+        cell.RestTitle.text = tableTitle[indexPath.row]
+        cell.CosmosView.rating = tableRate[indexPath.row]
+        cell.CosmosView.text = tableReviewCount[indexPath.row]
+        cell.RestDiscountRate.text = tablePercent[indexPath.row]
+        cell.RestCost.text = tablePrice[indexPath.row]
         
         return cell
     }
+    
 }
 
 
