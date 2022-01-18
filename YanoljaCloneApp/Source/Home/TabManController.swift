@@ -21,7 +21,7 @@ class TabManViewController : TabmanViewController{
     func settingTabBar(ctBar: TMBar.ButtonBar) {
         //바 설정
         ctBar.layout.transitionStyle = .snap
-        ctBar.backgroundView.layer.addBorder([.bottom], color: UIColor.lightGray, width: 0.5)
+        ctBar.backgroundView.layer.addBorder([.bottom], color: UIColor.darkGray, width: 0.5)
         ctBar.backgroundView.style = .blur(style: .light)
         ctBar.layout.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 0.0, right: 20)
         ctBar.layout.interButtonSpacing = 20
@@ -61,8 +61,6 @@ class TabManViewController : TabmanViewController{
         printMyFonts()
         
         self.navigationController?.navigationBar.isHidden = true
-        
-//        tempView.layer.addBorder([.bottom], color: UIColor.lightGray, width: 1)
         
         
         

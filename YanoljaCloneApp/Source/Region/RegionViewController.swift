@@ -23,11 +23,11 @@ class RegionViewController : BaseViewController {
     @IBOutlet weak var CloseViewBtn: UIButton!
     @IBOutlet weak var SearchBtn: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         CloseViewBtn.isHidden = closeCheck
+        self.navigationController?.navigationBar.isHidden = true
         
         self.LargeTableView.delegate = self
         self.LargeTableView.dataSource = self

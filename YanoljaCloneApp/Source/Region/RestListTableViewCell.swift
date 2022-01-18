@@ -51,6 +51,14 @@ class RestListTableViewCell: UITableViewCell {
 
             cellSleepOriginalPrice.attributedText = attributeString
         }
+        
+        
+        cellRate.settings.updateOnTouch = false
+        cellRate.settings.starMargin = 1
+        cellRate.settings.fillMode = .precise
+        cellRate.settings.starSize = 15
+        cellRate.settings.textFont = UIFont.boldSystemFont(ofSize: 15)
+        cellRate.settings.textColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

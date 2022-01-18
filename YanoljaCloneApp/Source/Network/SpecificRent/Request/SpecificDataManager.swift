@@ -25,7 +25,7 @@ class SpecificDataManager : UIViewController{
             .responseDecodable(of: SpecificResponse.self) { response in
                 switch response.result {
                 case .success(let response):
-                    print("SUCCESS")
+                    print("YOU SUCCESS")
                     delegate.didRetrieveRestList(result: response)
                 case .failure(let error):
                     print(error)

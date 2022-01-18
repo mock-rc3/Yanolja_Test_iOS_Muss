@@ -55,6 +55,8 @@ class RoomViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = true
+        
         let timeTapGesture = UITapGestureRecognizer(target: self, action: #selector(timeResverve(sender:)))
         let sleepTapGesture = UITapGestureRecognizer(target: self, action: #selector(sleepReserve(sender:)))
         TimeReservation.addGestureRecognizer(timeTapGesture)
@@ -64,8 +66,8 @@ class RoomViewController : BaseViewController {
         timeView.layer.addBorder([.top, .left, .right], color: UIColor.lightGray, width: 0.5)
         sleepView.layer.addBorder([.top, .left, .right], color: UIColor.lightGray, width: 0.5)
         
-        TimeReservation.layer.cornerRadius = 15
-        SleepReservation.layer.cornerRadius = 15
+        TimeReservation.layer.cornerRadius = 10
+        SleepReservation.layer.cornerRadius = 10
         
     
         if let text = timePrice.text {
@@ -90,6 +92,11 @@ class RoomViewController : BaseViewController {
         
         dataManager.requestSpecificRoomList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: hotelId, roomId: roomId, delegate: self)
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     @objc func timeResverve(sender : UITapGestureRecognizer) {
         

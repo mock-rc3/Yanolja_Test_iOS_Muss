@@ -22,6 +22,7 @@ class RestListViewController : BaseViewController {
     var cellLocation : Array<String> = []
     var cellTitle : Array<String> = []
     var cellRate : Array<String> = []
+//    var cellReviewCount : Array<String> = []
     
     var cellRentOriginalPrice : Array<String> = []
     var cellRentDiscountRate : Array<Int> = []
@@ -45,6 +46,7 @@ class RestListViewController : BaseViewController {
         super.viewDidLoad()
         
         self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
         
         Location.layer.borderWidth = 1
         Location.layer.borderColor = UIColor.darkGray.cgColor
@@ -64,6 +66,12 @@ class RestListViewController : BaseViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         Location.addGestureRecognizer(tapGesture)
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
         let RVC = self.storyboard?.instantiateViewController(withIdentifier: "regionView") as! RegionViewController
@@ -97,6 +105,7 @@ extension RestListViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.cellLocation.text = cellLocation[indexPath.row]
         cell.cellTitle.text = cellTitle[indexPath.row]
+        cell.cellRate.rating = Double(cellRate[indexPath.row]) ?? 5.0
         cell.cellRate.text = cellRate[indexPath.row]
         
         cell.cellRentOriginalPrice.text = "\(cellRentOriginalPrice[indexPath.row])원"
@@ -119,13 +128,13 @@ extension RestListViewController : UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let NextView = UIStoryboard(name: "SpecificRest", bundle: nil).instantiateViewController(withIdentifier: "specificRest")
         
         let SRVC = UIStoryboard(name: "SpecificRest", bundle: nil).instantiateViewController(withIdentifier: "specificList") as! SpecificRestViewController
         
         SRVC.hotelId = self.hotelId[indexPath.row]
         
-        self.present(NextView, animated: true)
+        self.navigationController?.pushViewController(SRVC, animated: true)
+//        self.present(NextView, animated: true)
     }
 
 }
@@ -146,6 +155,11 @@ extension RestListViewController {
                 } else {
                     self.cellRate.append("5.0")
                 }
+//                if let sumReview = i.sumReview {
+//                    self.cellReviewCount.append(sumReview)
+//                } else {
+//                    self.cellReviewCount.append("145")
+//                }
                 
                 if let timePrice = i.timePrice{
                     self.cellRentOriginalPrice.append(timePrice)

@@ -47,6 +47,7 @@ class timeReserveViewController : UIViewController {
         let basketTapGesture = UITapGestureRecognizer(target: self, action: #selector(basket(sender:)))
         reserveView.addGestureRecognizer(reserveTapGesture)
         basketView.addGestureRecognizer(basketTapGesture)
+        
     }
     
     
@@ -64,8 +65,8 @@ class timeReserveViewController : UIViewController {
         bottomBar.addShadow(location: .top)
         
         basketView.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.yanoljaPink, width: 0.5)
-        basketView.layer.cornerRadius = 15
-        reserveView.layer.cornerRadius = 15
+        basketView.layer.cornerRadius = 10
+        reserveView.layer.cornerRadius = 10
     }
     
     @objc func reserve(sender: UITapGestureRecognizer) {

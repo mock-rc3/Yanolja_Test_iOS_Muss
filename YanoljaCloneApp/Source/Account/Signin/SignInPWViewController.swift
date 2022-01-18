@@ -22,11 +22,15 @@ class SignInPWViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.backBarButtonItem?.title = ""
-        self.navigationItem.backBarButtonItem?.tintColor = .darkGray
+        self.navigationController?.navigationBar.isHidden = true
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         Next.addGestureRecognizer(tapGesture)
+    }
+    
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {

@@ -17,6 +17,12 @@ class LoginEmailView : BaseViewController, UITextFieldDelegate{
     @IBOutlet weak var EmailLoginBtn: UIView!
     
     
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     func LoginBtn() {
         if let IDInfo = IDButton.text, let PWInfo = PWButton.text {
             // 로그인 정보 데이터베이스에서 조회하는 코드
@@ -34,6 +40,8 @@ class LoginEmailView : BaseViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
         
         self.IDButton.delegate = self
         self.PWButton.delegate = self

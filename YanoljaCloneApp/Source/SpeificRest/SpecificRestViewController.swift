@@ -45,13 +45,20 @@ class SpecificRestViewController : BaseViewController {
     @IBOutlet weak var LargeText2: UILabel!
     @IBOutlet weak var smallText2: UILabel!
     
-
+    @IBOutlet weak var heartView: UIView!
+    @IBOutlet weak var selectView: UIView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = true
+        
+        
+        
         view1.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.emailBlue, width: 1)
-        view1.layer.cornerRadius = 30
+        view1.layer.cornerRadius = 10
         
         view2.layer.addBorder([.top, .bottom], color: UIColor.lightGray, width: 0.5)
         
@@ -59,19 +66,32 @@ class SpecificRestViewController : BaseViewController {
         
         view4.layer.addBorder([.bottom], color: UIColor.lightGray, width: 0.5)
         
-        self.restListTableView.delegate = self
-        self.restListTableView.dataSource = self
+        
+        heartView.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.lightGray, width: 0.5)
+        heartView.layer.cornerRadius = 10 
+        
+        selectView.layer.cornerRadius = 10
+        
+        
         
         dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: self.hotelId, delegate: self)
         self.showIndicator()
         
+        self.restListTableView.delegate = self
+        self.restListTableView.dataSource = self
+        
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -111,6 +131,8 @@ extension SpecificRestViewController {
     func didRetrieveRestList(result: SpecificResponse){
         if result.isSuccess {
             
+            print("success!@!@!@")
+            
             if let url = URL(string: result.result.hotelImg[0]){
                 let data = try? Data(contentsOf: url)
                 mainImg.image = UIImage(data: data!)
@@ -120,6 +142,7 @@ extension SpecificRestViewController {
             HotelTitle.text = result.result.hotelInfo.hotelName
             HotelRate.text = result.result.hotelInfo.rating
             locationMemo.text = result.result.hotelInfo.locationMemo
+            
             
             for i in result.result.roomList {
                 roomId.append(i.roomId)
@@ -137,6 +160,7 @@ extension SpecificRestViewController {
                 sleepSale.append(i.sleepSale)
                 sleepPrice.append(i.sleepPrice)
             }
+            print("success!!!!!!")
             
             self.restListTableView.reloadData()
             self.dismissIndicator()

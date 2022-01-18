@@ -17,7 +17,14 @@ class DomesticCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var RestCost: UILabel!
     
     
-    
+    override func awakeFromNib() {
+        CosmosView.settings.updateOnTouch = false
+        CosmosView.settings.starMargin = 1
+        CosmosView.settings.fillMode = .precise
+        CosmosView.settings.starSize = 15
+        CosmosView.settings.textFont = UIFont.boldSystemFont(ofSize: 15)
+        CosmosView.settings.textColor = .black
+    }
     
     
 }

@@ -17,7 +17,7 @@ class DomesticViewController : BaseViewController {
     var tableImg : Array<String> = ["테이블뷰1", "테이블뷰2", "테이블뷰3"]
     var tableTitle : Array<String> = ["잠실(가락) 캘리포니아 호텔", "잠실(가락) XYM", "신천(잠실새내) FORESTAR 1,2호점"]
     var tableRate : Array<Double> = [4.2, 4.5, 4.3]
-    var tableReviewCount : Array<String> = ["4.2 (111)", "4.5 (1235)", "4.3 (8892)"]
+    var tableReviewCount : Array<String> = ["4.2", "4.5", "4.3"]
     var tablePercent : Array<String> = ["29%", "12%", "16%"]
     var tablePrice : Array<String> = ["70,000원", "70,000원", "50,000원"]
     

@@ -29,12 +29,15 @@ class SignInPHViewController : BaseViewController {
     @IBOutlet weak var SendAuthNumTitle: UILabel!
     @IBOutlet weak var Complete: UIView!
     
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.backBarButtonItem?.title = ""
-        self.navigationItem.backBarButtonItem?.tintColor = .darkGray
+        self.navigationController?.navigationBar.isHidden = true
         
         PhoneNumTextField.layer.borderWidth = 1
         PhoneNumTextField.layer.borderColor = UIColor.darkGray.cgColor
