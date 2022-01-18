@@ -21,18 +21,20 @@ class TabManViewController : TabmanViewController{
     func settingTabBar(ctBar: TMBar.ButtonBar) {
         //바 설정
         ctBar.layout.transitionStyle = .snap
-        ctBar.backgroundView.tintColor = .white
-        ctBar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-//        ctBar.layout.interButtonSpacing = 25
-        ctBar.layout.alignment = .centerDistributed // .center시 선택된 탭이 가운데로 오게 됨.
-        ctBar.layout.contentMode = .fit
+        ctBar.backgroundView.layer.addBorder([.bottom], color: UIColor.lightGray, width: 0.5)
+        ctBar.backgroundView.style = .blur(style: .light)
+        ctBar.layout.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 0.0, right: 20)
+        ctBar.layout.interButtonSpacing = 20
+//        ctBar.layout.alignment = .centerDistributed // .center시 선택된 탭이 가운데로 오게 됨.
+        
+        ctBar.layout.contentMode = .intrinsic
         
         //버튼 설정
         ctBar.buttons.customize { (button) in
             button.tintColor = .black
             button.selectedTintColor = .yanoljaPink
-            button.font = .NotoSans(.medium, size: 15)
-            button.selectedFont = .NotoSans(.medium, size: 15)
+            button.font = .NotoSans(.medium, size: 17)
+            button.selectedFont = .NotoSans(.medium, size: 17)
         }
         
         //인디케이터 설정
@@ -58,8 +60,10 @@ class TabManViewController : TabmanViewController{
         
         printMyFonts()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isHidden = true
+        
+//        tempView.layer.addBorder([.bottom], color: UIColor.lightGray, width: 1)
+        
         
         
         let tabBarAppearance = UITabBarAppearance()

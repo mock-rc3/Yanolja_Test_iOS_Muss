@@ -50,9 +50,6 @@ class SpecificRestViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: 1, delegate: self)
-        self.showIndicator()
-        
         view1.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.emailBlue, width: 1)
         view1.layer.cornerRadius = 30
         
@@ -64,6 +61,9 @@ class SpecificRestViewController : BaseViewController {
         
         self.restListTableView.delegate = self
         self.restListTableView.dataSource = self
+        
+        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: self.hotelId, delegate: self)
+        self.showIndicator()
         
     }
 }

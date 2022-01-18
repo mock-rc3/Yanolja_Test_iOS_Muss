@@ -22,9 +22,9 @@ extension UIColor {
     // MARK: 메인 테마 색 또는 자주 쓰는 색을 정의
     // ex. label.textColor = .mainOrange
     class var mainOrange: UIColor { UIColor(hex: 0xF5663F) }
-    class var yanoljaPink: UIColor { UIColor(red: 254/255, green: 51/255, blue: 120/255, alpha: 1)}
+    class var yanoljaPink: UIColor { UIColor(red: 220/255, green: 20/255, blue: 87/255, alpha: 1)}
     class var yanoljaGray: UIColor {UIColor(red: 187/255, green: 187/255, blue: 186/255, alpha: 1)}
-    class var yanoljaIndicator: UIColor{UIColor(red: 200/255, green: 2/255, blue: 39/255, alpha: 1)}
+    class var yanoljaIndicator: UIColor{UIColor(red: 219/255, green: 2/255, blue: 39/255, alpha: 1)}
     class var emailBlue: UIColor{UIColor(red: 1/255, green: 1/255, blue: 196/255, alpha: 1)}
     class var VeryLightGray : UIColor{UIColor(red: 228/255, green: 228/255, blue: 229/255, alpha: 1)}
     

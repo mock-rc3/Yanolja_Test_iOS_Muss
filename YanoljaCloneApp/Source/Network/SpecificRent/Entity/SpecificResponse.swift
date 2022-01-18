@@ -27,7 +27,9 @@ struct Result : Decodable {
 
 // MARK: - HotelInfo
 struct HotelInfo : Decodable{
-    var hotelName, rating, sumReview, sumReply: String
+    var hotelId : Int
+    var hotelName, rating, sumReview : String
+    var sumReply: String?
     var locationMemo: String
 }
 
@@ -61,7 +63,7 @@ struct resultConvenience : Decodable{
 
 // MARK: - ReviewList
 struct ReviewList : Decodable{
-    var reviewId : String
+    var reviewId : Int
     var avgScore : String?
     var nickname : String
     var roomName: String
@@ -71,7 +73,9 @@ struct ReviewList : Decodable{
 
 // MARK: - ReviewReply
 struct ReviewReply : Decodable{
-    var reviewId, replyContent, createDate: String
+    var reviewId : Int
+    var replyContent : String
+    var createDate: String
 }
 
 // MARK: - ReviewScore
