@@ -11,6 +11,7 @@ import UIKit
 class SpecificRestViewController : BaseViewController {
     
     lazy var dataManager : SpecificDataManager = SpecificDataManager()
+    lazy var likeDataManager : LikeAndReserveDataManager = LikeAndReserveDataManager()
     var hotelId : Int = 0
     
     var roomName : Array<String> = []
@@ -27,6 +28,8 @@ class SpecificRestViewController : BaseViewController {
     var sleepPercent : Array<Int> = []
     var sleepPrice : Array<String> = []
     var sleepSale : Array<String> = []
+    
+    var likeId : Int?
     
     
     @IBOutlet weak var mainImg: UIImageView!
@@ -47,15 +50,13 @@ class SpecificRestViewController : BaseViewController {
     
     @IBOutlet weak var heartView: UIView!
     @IBOutlet weak var selectView: UIView!
-    
+    @IBOutlet weak var heartImg: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true
-        
-        
         
         view1.layer.addBorder([.top, .bottom, .left, .right], color: UIColor.emailBlue, width: 1)
         view1.layer.cornerRadius = 10
@@ -72,10 +73,16 @@ class SpecificRestViewController : BaseViewController {
         
         selectView.layer.cornerRadius = 10
         
+        //찜 했는지 여부에 따라 하트 색깔 바뀜
+        likeInitialization()
         
-        
-        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: self.hotelId, delegate: self)
+        let LikeClick = UITapGestureRecognizer(target: self, action: #selector(sendHotelId(sender:)))
+        heartView.addGestureRecognizer(LikeClick)
+            
+        dataManager.requestSpecificRestList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekday", hotelId: hotelId, delegate: self)
+    
         self.showIndicator()
+        
         
         self.restListTableView.delegate = self
         self.restListTableView.dataSource = self
@@ -86,12 +93,34 @@ class SpecificRestViewController : BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc func sendHotelId(sender : UITapGestureRecognizer) {
+        
+        if Constant.ud.bool(forKey: "\(self.hotelId)") {
+            heartImg.image = UIImage(named: "하트")
+            likeDataManager.deleteLikeItem(delegate: self)
+        }
+        
+        likeDataManager.likeHotel(hotel_id: self.hotelId, delegate: self)
+        self.showIndicator()
+    }
+    
+    func likeInitialization() {
+        if Constant.ud.bool(forKey: "\(self.hotelId)") {
+            heartImg.image = UIImage(named: "하트")
+        } else {
+            heartImg.image = UIImage(named: "찜했음")
+        }
+    }
+    
+    
+    
+    
 }
 
 extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return roomName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -112,7 +141,7 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
         cell.sleepPercent.text = "\(sleepPercent[indexPath.row])%"
         cell.sleepSale.text = "\(sleepSale[indexPath.row])원"
         cell.sleepPrice.text = "\(sleepPrice[indexPath.row])원"
-        
+//
         return cell
     }
     
@@ -123,6 +152,10 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
         
         self.navigationController?.pushViewController(NextPhase, animated: true)
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 326
     }
 }
 
@@ -168,11 +201,32 @@ extension SpecificRestViewController {
         }else {
             self.presentAlert(title: result.message)
         }
-        
     }
+    
+    func deleteSuccess(result : DeleteLikeResponse) {
+        
+        self.presentAlert(title: result.message)
+    }
+    
     func failedToRequest(message : String){
         self.presentAlert(title: message)
     }
     
+}
+
+extension SpecificRestViewController{
+    
+    func didRetreiveLikeInfo(result : LikeResponse) {
+        if result.isSuccess{
+            Constant.likeId = result.result.id
+            self.dismissIndicator()
+            self.presentAlert(title: "찜 목록에 저장했습니다")
+        } else {
+            self.presentAlert(title: result.message)
+        }
+    }
+    func failedToRequestLikeId(message : String) {
+        self.presentAlert(title: message)
+    }
 }
 

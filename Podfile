@@ -13,6 +13,7 @@ pod 'naveridlogin-sdk-ios'
 pod 'Tabman'
 pod 'Pageboy'
 pod 'Cosmos'
+pod 'PureLayout'
 
   # Pods for YanoljaCloneApp
 

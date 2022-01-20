@@ -714,6 +714,7 @@
                         <outlet property="HotelTitle" destination="eQ0-am-nZQ" id="5o3-Zn-eXJ"/>
                         <outlet property="LargeText1" destination="O9D-pg-S2W" id="sGQ-ca-naM"/>
                         <outlet property="LargeText2" destination="dbi-Qt-bdl" id="vUH-gW-Ywu"/>
+                        <outlet property="heartImg" destination="5Vo-bg-vaN" id="Hy5-JT-qb3"/>
                         <outlet property="heartView" destination="GmX-Im-Gsp" id="Hj7-q8-hyz"/>
                         <outlet property="locationMemo" destination="dNS-Fk-HDW" id="aIu-2j-jIq"/>
                         <outlet property="mainImg" destination="rdi-UY-jRw" id="8kD-5W-Dgq"/>

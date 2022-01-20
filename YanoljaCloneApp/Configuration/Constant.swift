@@ -9,8 +9,10 @@ import Alamofire
 
 struct Constant {
     
-    static let BOOK_BASE_URL = "http://book.interpark.com/api/"
     static let ud = UserDefaults.standard
     static let BASE_URL = "jwyang.shop:8080"
+    static var user_id = ""
+    static var jwt = ""
+    static var likeId = 0
     
 }

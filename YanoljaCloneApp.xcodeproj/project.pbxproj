@@ -57,6 +57,11 @@
 		326A6FE22792C07100675B5A /* SpecificRestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE12792C07100675B5A /* SpecificRestViewController.swift */; };
 		326A6FE72792C33800675B5A /* SpecificResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE62792C33800675B5A /* SpecificResponse.swift */; };
 		326A6FE92792C35100675B5A /* SpecificDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A6FE82792C35100675B5A /* SpecificDataManager.swift */; };
+		326C80C92797C2ED007DDD0B /* HeartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80C82797C2ED007DDD0B /* HeartViewController.swift */; };
+		326C80CB2797C3D7007DDD0B /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80CA2797C3D7007DDD0B /* HeartTableViewCell.swift */; };
+		326C80D12797DF40007DDD0B /* LikeAndResponseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D02797DF40007DDD0B /* LikeAndResponseDataManager.swift */; };
+		326C80D32797E09E007DDD0B /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D22797E09E007DDD0B /* LikeResponse.swift */; };
+		326C80D52797E653007DDD0B /* showLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D42797E653007DDD0B /* showLikeList.swift */; };
 		3274064B278FCB7C00EAF9F9 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */; };
 		3274064D278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */; };
 		3274064F278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064E278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift */; };
@@ -134,6 +139,11 @@
 		326A6FE12792C07100675B5A /* SpecificRestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificRestViewController.swift; sourceTree = "<group>"; };
 		326A6FE62792C33800675B5A /* SpecificResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificResponse.swift; sourceTree = "<group>"; };
 		326A6FE82792C35100675B5A /* SpecificDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDataManager.swift; sourceTree = "<group>"; };
+		326C80C82797C2ED007DDD0B /* HeartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartViewController.swift; sourceTree = "<group>"; };
+		326C80CA2797C3D7007DDD0B /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
+		326C80D02797DF40007DDD0B /* LikeAndResponseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAndResponseDataManager.swift; sourceTree = "<group>"; };
+		326C80D22797E09E007DDD0B /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
+		326C80D42797E653007DDD0B /* showLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showLikeList.swift; sourceTree = "<group>"; };
 		3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeRegionTableViewCell.swift; sourceTree = "<group>"; };
 		3274064E278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRegionTableViewCell.swift; sourceTree = "<group>"; };
@@ -372,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				322256B2278A78410090A0DF /* Heart.storyboard */,
+				326C80C82797C2ED007DDD0B /* HeartViewController.swift */,
+				326C80CA2797C3D7007DDD0B /* HeartTableViewCell.swift */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -388,6 +400,7 @@
 		32685E8427897864002389AF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				326C80CC2797DEFB007DDD0B /* Like&Reserve */,
 				326A6FE32792C30D00675B5A /* SpecificRent */,
 				3293C27527903D9800F4F892 /* Region */,
 				3293C27427903D6C00F4F892 /* SignUpandLogIN */,
@@ -477,6 +490,32 @@
 			isa = PBXGroup;
 			children = (
 				326A6FE82792C35100675B5A /* SpecificDataManager.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		326C80CC2797DEFB007DDD0B /* Like&Reserve */ = {
+			isa = PBXGroup;
+			children = (
+				326C80CF2797DF1B007DDD0B /* Request */,
+				326C80CD2797DF0F007DDD0B /* Entity */,
+			);
+			path = "Like&Reserve";
+			sourceTree = "<group>";
+		};
+		326C80CD2797DF0F007DDD0B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				326C80D22797E09E007DDD0B /* LikeResponse.swift */,
+				326C80D42797E653007DDD0B /* showLikeList.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		326C80CF2797DF1B007DDD0B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				326C80D02797DF40007DDD0B /* LikeAndResponseDataManager.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -710,6 +749,7 @@
 				324F82E3279446C500AD4739 /* timeSelectViewController.swift in Sources */,
 				324F82E5279446D400AD4739 /* timeReserveViewController.swift in Sources */,
 				32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */,
+				326C80D52797E653007DDD0B /* showLikeList.swift in Sources */,
 				324F82E7279446E200AD4739 /* sleepReserveViewController.swift in Sources */,
 				326A6FE92792C35100675B5A /* SpecificDataManager.swift in Sources */,
 				32860ECB278E880D005356BB /* DomesticTableView.swift in Sources */,
@@ -719,10 +759,14 @@
 				3274064D278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift in Sources */,
 				32685E6D278976F8002389AF /* UIFont.swift in Sources */,
 				32DDF8AF278A8410004C1280 /* TransportationViewController.swift in Sources */,
+				326C80C92797C2ED007DDD0B /* HeartViewController.swift in Sources */,
 				3274064F278FCBB600EAF9F9 /* SmallRegionTableViewCell.swift in Sources */,
+				326C80D12797DF40007DDD0B /* LikeAndResponseDataManager.swift in Sources */,
+				326C80CB2797C3D7007DDD0B /* HeartTableViewCell.swift in Sources */,
 				32685E932789EA60002389AF /* LoginDataManager.swift in Sources */,
 				3293C27B27903DD100F4F892 /* RegionResponse.swift in Sources */,
 				324F82DF27943E7200AD4739 /* RoomViewController.swift in Sources */,
+				326C80D32797E09E007DDD0B /* LikeResponse.swift in Sources */,
 				32685E69278976F8002389AF /* String.swift in Sources */,
 				32685E7927897757002389AF /* Constant.swift in Sources */,
 				32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */,
