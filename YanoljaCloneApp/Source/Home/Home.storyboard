@@ -2826,17 +2826,6 @@
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Q1b-Kd-FQb">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-        <designable name="mbh-ip-fOO">
-            <size key="intrinsicContentSize" width="105.68701171875" height="16.4501953125"/>
-        </designable>
-        <designable name="vOS-MV-S63">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="1" width="636" height="300"/>
         <image name="1월혜택모음" width="85" height="67"/>

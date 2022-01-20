@@ -160,7 +160,7 @@ extension SignInViewController {
 
 
 extension SignInViewController {
-    func didRetrieveEmailAuthNum (result : AuthResponse) {
+    func didRetrieveEmailAuthNum (result : AuthNumResponse) {
         if result.isSuccess {
             self.dismissIndicator()
             let NextPhase = self.storyboard?.instantiateViewController(withIdentifier: "second") as! SignInPWViewController

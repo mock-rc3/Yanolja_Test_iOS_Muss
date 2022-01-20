@@ -12,6 +12,7 @@ class MyPageViewController : BaseViewController {
     var id : String = ""
     var jwt : String = ""
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

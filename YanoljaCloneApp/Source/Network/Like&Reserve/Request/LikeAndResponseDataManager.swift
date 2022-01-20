@@ -89,4 +89,93 @@ class LikeAndReserveDataManager : UIViewController {
             }
     }
     
+    
+    func reserveTime(hotel_id : Int, room_id : Int, startTime : String, endTime : String, price : String, delegate : timeReserveViewController) {
+        
+        let url = "http://\(Constant.BASE_URL)"
+                + "/booking/time"
+        
+        let body : [String : Any] = [
+            "user_id" : Constant.user_id,
+            "hotel_id" : hotel_id,
+            "room_id" : room_id,
+            "booking_type" : "T",
+            "payment_id" : 3,
+            "booking_start_date" : "20220115",
+            "booking_end_date" : "20220116",
+            "booking_time_start" : "1400",
+            "booking_time_end" : "1800",
+            "room_final_price" : price
+        ]
+        
+        
+        AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: RoomReserveResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    print("SUCCESS")
+                    delegate.didRetreiveReserveInfo(result: response)
+                case .failure(let error):
+                    print(error)
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
+    
+    func reserveSleep(hotel_id : Int, room_id : Int, startTime : String, endTime : String, price : String, delegate : sleepReserveViewController) {
+        
+        let url = "http://\(Constant.BASE_URL)"
+                + "/booking/sleep"
+        
+        let body : [String : Any] = [
+            "user_id" : Constant.user_id,
+            "hotel_id" : hotel_id,
+            "room_id" : room_id,
+            "booking_type" : "T",
+            "payment_id" : 3,
+            "booking_start_date" : "20220115",
+            "booking_end_date" : "20220116",
+            "booking_time_start" : "1400",
+            "booking_time_end" : "1800",
+            "room_final_price" : price
+        ]
+        
+        
+        AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseDecodable(of: RoomReserveResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    print("SUCCESS")
+                    delegate.didRetreiveSleepInfo(result: response)
+                case .failure(let error):
+                    print(error)
+                    delegate.failedToSleepRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
+    
+    func showMeReserveList(delegate : ReserveViewController) {
+        let url = "http://\(Constant.BASE_URL)"
+        + "/booking/\(Constant.user_id)"
+        
+        let header : HTTPHeaders = [
+            "X-AUTH-TOKEN" : Constant.jwt
+        ]
+        
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+            .validate()
+            .responseDecodable(of: ReserveResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    print("SUCCESS")
+                    delegate.didRetreiveReserveList(result: response)
+                case .failure(let error):
+                    print(error)
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                }
+            }
+    }
+    
 }

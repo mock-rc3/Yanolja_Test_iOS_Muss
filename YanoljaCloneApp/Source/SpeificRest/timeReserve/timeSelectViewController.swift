@@ -15,6 +15,8 @@ class timeSelectViewController : UIViewController {
     var minPersonnel = ""
     var price = ""
     
+    var hotelId : Int = 0
+    var roomId : Int = 0
 
     @IBOutlet weak var One: UILabel!
     @IBOutlet weak var Two: UILabel!
@@ -37,24 +39,32 @@ class timeSelectViewController : UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         
         One.addGestureRecognizer(tapGesture)
-        Two.addGestureRecognizer(tapGesture)
-        Three.addGestureRecognizer(tapGesture)
-        Four.addGestureRecognizer(tapGesture)
-        Five.addGestureRecognizer(tapGesture)
-        Six.addGestureRecognizer(tapGesture)
+//        One.isUserInteractionEnabled = true
+//
+//        Two.addGestureRecognizer(tapGesture)
+//        Three.addGestureRecognizer(tapGesture)
+//        Four.addGestureRecognizer(tapGesture)
+//        Five.addGestureRecognizer(tapGesture)
+//        Six.addGestureRecognizer(tapGesture)
         
     }
     
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
+        
+        print("tapped time")
+        
         let TRVC = self.storyboard?.instantiateViewController(withIdentifier: "timeView") as! timeReserveViewController
         
-        TRVC.timeCheckIn.text = One.text?.substring(from: 0, to: 4)
-        TRVC.timeCheckOut.text = One.text?.substring(from: 6, to: 10)
+//        TRVC.timeCheckIn.text = One.text!.substring(from: 0, to: 4)
+//        TRVC.timeCheckOut.text = One.text!.substring(from: 6, to: 10)
         TRVC.Name = self.Name
         TRVC.maxPersonnel = self.maxPersonnel
         TRVC.minPersonnel = self.minPersonnel
         TRVC.price = self.price
+        
+        TRVC.hotelId = hotelId
+        TRVC.roomId = roomId
         
         TRVC.modalTransitionStyle = .coverVertical
         TRVC.modalPresentationStyle = .overFullScreen

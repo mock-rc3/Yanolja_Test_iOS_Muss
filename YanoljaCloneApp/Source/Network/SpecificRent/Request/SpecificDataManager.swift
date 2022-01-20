@@ -41,27 +41,32 @@ class SpecificDataManager : UIViewController{
     
     func requestSpecificRoomList(startDate : String, endDate : String, days : String, hotelId : Int, roomId : Int, delegate : RoomViewController) {
         
-        let url = "http://\(Constant.BASE_URL)"
-            + "/hotel/\(hotelId)"
-            + "/room/\(roomId)"
-            + "?startDate=\(startDate)"
+        let url = "http://" + Constant.BASE_URL
+            + "/hotel"
+            + "?hotelId=\(hotelId)"
+            + "&roomId=\(roomId)"
+            + "&startDate=\(startDate)"
             + "&endDate=\(endDate)"
             + "&days=\(days)"
         
+//        let url = "http://jwyang.shop:8080/hotel?hotelId=1&roomId=1&startDate=2022-01-14&endDate=2022-01-15&days=weekday"
         
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
-            .validate()
-            .responseDecodable(of: RoomResponse.self) { response in
-                switch response.result {
-                case .success(let response):
-                    print("SUCCESS")
-                    delegate.didRetreiveRoomInfo(result: response)
-                case .failure(let error):
-                    print(error)
-                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+        if let encoded = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded){
+        
+        
+            AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                .validate()
+                .responseDecodable(of: RoomResponse.self) { response in
+                    switch response.result {
+                    case .success(let response):
+                        print("SUCCESS")
+                        delegate.didRetreiveRoomInfo(result: response)
+                    case .failure(let error):
+                        print(error)
+                        delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                    }
                 }
-            }
-        
+        }
     }
     
     

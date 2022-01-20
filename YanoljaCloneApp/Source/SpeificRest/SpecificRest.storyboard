@@ -1567,8 +1567,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-s5-eHS">
                                         <rect key="frame" x="212" y="13" width="182" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="객실 선택하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-L7-AU1">
-                                                <rect key="frame" x="39.5" y="13.5" width="103.5" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박 예약하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-L7-AU1">
+                                                <rect key="frame" x="39" y="13.5" width="104" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1691,6 +1691,7 @@
                     <connections>
                         <outlet property="SleepReservation" destination="YCT-s5-eHS" id="el1-qh-WQf"/>
                         <outlet property="TimeReservation" destination="DGj-YV-sdI" id="Iwo-Y7-Iwh"/>
+                        <outlet property="bottomBar" destination="Wyp-tM-uM3" id="xlK-ma-U6z"/>
                         <outlet property="endDate" destination="AEB-fw-hBZ" id="9bU-I5-9H4"/>
                         <outlet property="hotelName" destination="tWU-kH-nFA" id="eej-o0-5Jo"/>
                         <outlet property="roomImg" destination="I5C-Jp-SUF" id="lzE-KO-zF1"/>
@@ -2654,43 +2655,43 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="IMG_B4EED6C52BD8-1" imageContentMode="scaleAspectFit"/>
+                                    <backgroundConfiguration key="background" image="닫기" imageContentMode="scaleAspectFit"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="dismiss:" destination="wMz-gv-xcc" eventType="touchUpInside" id="hpS-ch-vRD"/>
+                                    <action selector="dismiss:" destination="wMz-gv-xcc" eventType="touchUpInside" id="50S-iD-Gl2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:00~18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7D-rW-Ks4">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:00~18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7D-rW-Ks4">
                                 <rect key="frame" x="20" y="133" width="108" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:00~19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-GB-KkE">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:00~19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-GB-KkE">
                                 <rect key="frame" x="20" y="191" width="108" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:00~20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-Vv-VP6">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:00~20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-Vv-VP6">
                                 <rect key="frame" x="20" y="249" width="110" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:00~21:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-4b-mBe">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:00~21:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-4b-mBe">
                                 <rect key="frame" x="20" y="307" width="106" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:00~22:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u0-KM-c71">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:00~22:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u0-KM-c71">
                                 <rect key="frame" x="20" y="365" width="110" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:00~22:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHG-ax-P9J">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:00~22:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHG-ax-P9J">
                                 <rect key="frame" x="20" y="423" width="110" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -2720,13 +2721,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Five" destination="1u0-KM-c71" id="uyR-Dn-hAG"/>
-                        <outlet property="Four" destination="O3g-4b-mBe" id="ICN-qJ-jBL"/>
-                        <outlet property="One" destination="x7D-rW-Ks4" id="ZSl-U8-4HQ"/>
-                        <outlet property="Six" destination="XHG-ax-P9J" id="vOR-er-bVn"/>
-                        <outlet property="Three" destination="WqX-Vv-VP6" id="67t-P7-WQb"/>
-                        <outlet property="Two" destination="bYg-GB-KkE" id="92W-Yj-1gq"/>
-                        <outlet property="dismiss" destination="0OC-r0-tJB" id="Aka-9u-5zG"/>
+                        <outlet property="Five" destination="1u0-KM-c71" id="myT-mr-fjR"/>
+                        <outlet property="Four" destination="O3g-4b-mBe" id="Af9-pd-R4Y"/>
+                        <outlet property="One" destination="x7D-rW-Ks4" id="FcM-vk-DDq"/>
+                        <outlet property="Six" destination="XHG-ax-P9J" id="m1j-nx-hON"/>
+                        <outlet property="Three" destination="WqX-Vv-VP6" id="OKK-TP-z2S"/>
+                        <outlet property="Two" destination="bYg-GB-KkE" id="c6w-Qb-sqS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6el-Eb-s5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -67,23 +67,26 @@ class LoginDataManager : UIViewController {
             "refreshToken" : refresh
         ]
         
-        AF.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
-            .validate()
-            .responseDecodable(of: SignUpAndLogIn.self) { response in
-                switch response.result {
-                case .success(let response):
-                    if response.isSuccess{
-                        
-                        print(response.message)
-                        let NextPhase = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
-                        
-                        self.present(NextPhase, animated: true)
-                    }
-                case .failure(let error):
-                    print(error)
-                }
-            }
+        if let encoded = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded){
         
+            AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+                .validate()
+                .responseDecodable(of: SignUpAndLogIn.self) { response in
+                    switch response.result {
+                    case .success(let response):
+                        if response.isSuccess{
+                            
+                            print(response.message)
+                            let NextPhase = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
+                            
+                            self.present(NextPhase, animated: true)
+                        }
+                    case .failure(let error):
+                        print("failed!!")
+                        print(error)
+                    }
+                }
+        }
         
     }
 

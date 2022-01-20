@@ -10,10 +10,15 @@ import UIKit
 
 class timeReserveViewController : UIViewController {
     
+    lazy var dataManager : LikeAndReserveDataManager = LikeAndReserveDataManager()
+    
     var Name = ""
     var maxPersonnel = ""
     var minPersonnel = ""
     var price = ""
+    
+    var hotelId : Int = 0
+    var roomId : Int = 0
     
     @IBOutlet weak var roomName: UILabel!
     @IBOutlet weak var roomLimit: UILabel!
@@ -70,9 +75,33 @@ class timeReserveViewController : UIViewController {
     }
     
     @objc func reserve(sender: UITapGestureRecognizer) {
+        
+        dataManager.reserveTime(hotel_id: hotelId, room_id: roomId, startTime: "14:00", endTime: "18:00", price: price, delegate: self)
+        
+        self.showIndicator()
+        
         return
     }
     @objc func basket(sender: UITapGestureRecognizer) {
         return
+    }
+}
+
+
+extension timeReserveViewController {
+    func didRetreiveReserveInfo(result : RoomReserveResponse) {
+        if result.isSuccess{
+            self.dismissIndicator()
+            self.presentAlert(title: result.message)
+            
+            let home = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "home")
+            self.changeRootViewController(home)
+            
+        } else {
+            self.presentAlert(title: result.message)
+        }
+    }
+    func failedToRequest(message : String) {
+        self.presentAlert(title: message)
     }
 }

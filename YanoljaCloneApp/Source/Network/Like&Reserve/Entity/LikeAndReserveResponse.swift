@@ -24,3 +24,19 @@ struct DeleteLikeResponse : Decodable {
     let message : String
     let result : String
 }
+
+
+
+// MARK: - Welcome
+struct RoomReserveResponse : Decodable{
+    let isSuccess: Bool
+    let code: Int
+    let message: String
+    let result: RoomReserveResult
+}
+
+// MARK: - Result
+struct RoomReserveResult : Decodable{
+    let id: Int
+}
+

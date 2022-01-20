@@ -48,6 +48,8 @@ class RoomViewController : BaseViewController {
     @IBOutlet weak var sleepView: UIView!
     
     //하단 뷰
+    
+    @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var TimeReservation: UIView!
     @IBOutlet weak var SleepReservation: UIView!
     
@@ -65,6 +67,8 @@ class RoomViewController : BaseViewController {
         
         timeView.layer.addBorder([.top, .left, .right], color: UIColor.lightGray, width: 0.5)
         sleepView.layer.addBorder([.top, .left, .right], color: UIColor.lightGray, width: 0.5)
+        
+        bottomBar.addShadow(location: .top)
         
         TimeReservation.layer.cornerRadius = 10
         SleepReservation.layer.cornerRadius = 10
@@ -90,7 +94,7 @@ class RoomViewController : BaseViewController {
         }
         
         
-        dataManager.requestSpecificRoomList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekend", hotelId: hotelId, roomId: roomId, delegate: self)
+        dataManager.requestSpecificRoomList(startDate: "2022-01-15", endDate: "2022-01-16", days: "weekday", hotelId: hotelId, roomId: roomId, delegate: self)
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -101,24 +105,31 @@ class RoomViewController : BaseViewController {
     @objc func timeResverve(sender : UITapGestureRecognizer) {
         
         let TSV = self.storyboard?.instantiateViewController(withIdentifier: "timeSelectView") as! timeSelectViewController
+        
         TSV.Name = Name
         TSV.minPersonnel = minPersonnel
         TSV.maxPersonnel = maxPersonnel
         TSV.price = price
+        TSV.hotelId = hotelId
+        TSV.roomId = roomId
         
-        if let presentationController = TSV.presentationController as? UISheetPresentationController {
-            presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
-        }
+        TSV.modalPresentationStyle = .overCurrentContext
+        TSV.modalTransitionStyle = .coverVertical
+        
         self.present(TSV, animated: true)
     }
+    
     
     @objc func sleepReserve(sender : UITapGestureRecognizer) {
         
         let SV = self.storyboard?.instantiateViewController(withIdentifier: "sleepView") as! sleepReserveViewController
+        
         SV.Name = Name
         SV.minPersonnel = minPersonnel
         SV.maxPersonnel = maxPersonnel
         SV.price = price
+        SV.hotelId = hotelId
+        SV.roomId = roomId
         
         SV.modalTransitionStyle = .coverVertical
         SV.modalPresentationStyle = .overFullScreen
@@ -141,15 +152,18 @@ extension RoomViewController {
             self.roomInfo.text = result.result.roomInfo.roomMemo
             self.roomLimit.text = "기준 인원 \(result.result.roomInfo.minPersonnel)명 (최대\(result.result.roomInfo.maxPersonnel)명)"
             self.hotelName.text = result.result.roomInfo.hotelName
-            if let url = URL(string: result.result.roomImg[0]) {
-                let data = try? Data(contentsOf: url)
-                self.roomImg.image = UIImage(data: data!)
+            
+            if let img = result.result.roomImg[1]{
+                if let url = URL(string: img) {
+                    let data = try? Data(contentsOf: url)
+                    self.roomImg.image = UIImage(data: data!)
+                }
             }
             
-            self.timeUse.text = result.result.roomInfo.timeUse
+            self.timeUse.text = "최대\(result.result.roomInfo.timeUse)시간"
             self.timeRange.text = "\(result.result.roomInfo.timeStart) ~ \(result.result.roomInfo.timeEnd)"
             self.timePrice.text = "\(result.result.roomInfo.timePrice)원"
-            self.timePercent.text = "\(result.result.roomInfo.timePercent)&"
+            self.timePercent.text = "\(result.result.roomInfo.timePercent)%"
             self.timeSale.text = result.result.roomInfo.timeSale
             
             self.sleepCheckIn.text = "\(result.result.roomInfo.sleepCheckIn) 부터"

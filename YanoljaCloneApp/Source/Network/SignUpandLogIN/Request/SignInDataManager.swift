@@ -43,7 +43,7 @@ class SignInDataManeger : UIViewController {
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()
-            .responseDecodable(of: AuthResponse.self) { response in
+            .responseDecodable(of: AuthNumResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     delegate.didRetrieveEmailAuthNum(result: response)

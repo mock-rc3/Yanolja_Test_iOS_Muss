@@ -126,6 +126,11 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = restListTableView.dequeueReusableCell(withIdentifier: "restSpecificCell", for: indexPath) as! RestTableViewCell
         
+        //셀 클릭했을 때 회색으로 안변하게
+        let background = UIView()
+        background.backgroundColor = .clear
+        cell.selectedBackgroundView = background
+        
         cell.roomName.text = roomName[indexPath.row]
         if let url = URL(string: roomImg[indexPath.row]) {
             let data = try? Data(contentsOf: url)
@@ -149,6 +154,9 @@ extension SpecificRestViewController : UITableViewDelegate, UITableViewDataSourc
         let NextPhase = self.storyboard?.instantiateViewController(withIdentifier: "roomView") as! RoomViewController
         NextPhase.roomId = roomId[indexPath.row]
         NextPhase.hotelId = self.hotelId
+        
+        print(roomId[indexPath.row])
+        print(hotelId)
         
         self.navigationController?.pushViewController(NextPhase, animated: true)
         

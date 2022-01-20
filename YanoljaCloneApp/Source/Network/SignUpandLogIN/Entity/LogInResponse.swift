@@ -15,6 +15,13 @@ struct AuthResponse : Decodable {
     var message : String
 }
 
+
+struct AuthNumResponse : Decodable {
+    var isSuccess : Bool
+    var code : Int
+    var message : String
+}
+
 struct SignUpAndLogIn : Decodable {
     var isSuccess : Bool
     var code : Int

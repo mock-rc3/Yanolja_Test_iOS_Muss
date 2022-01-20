@@ -15,6 +15,9 @@
 		322256B3278A78410090A0DF /* Heart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256B2278A78410090A0DF /* Heart.storyboard */; };
 		322256B5278A784B0090A0DF /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322256B4278A784B0090A0DF /* MyPage.storyboard */; };
 		322256B7278A82B70090A0DF /* TabManController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322256B6278A82B70090A0DF /* TabManController.swift */; };
+		3233786D2799A38400B8936A /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233786C2799A38400B8936A /* ReserveViewController.swift */; };
+		323378712799A3DF00B8936A /* ReserveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323378702799A3DF00B8936A /* ReserveTableViewCell.swift */; };
+		323378742799A7B700B8936A /* showMeReserveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323378732799A7B700B8936A /* showMeReserveList.swift */; };
 		32472084278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472083278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift */; };
 		32472086278D43FE009E4B8B /* DomesticCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */; };
 		32472088278D7F52009E4B8B /* SIgnInPHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */; };
@@ -60,7 +63,7 @@
 		326C80C92797C2ED007DDD0B /* HeartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80C82797C2ED007DDD0B /* HeartViewController.swift */; };
 		326C80CB2797C3D7007DDD0B /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80CA2797C3D7007DDD0B /* HeartTableViewCell.swift */; };
 		326C80D12797DF40007DDD0B /* LikeAndResponseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D02797DF40007DDD0B /* LikeAndResponseDataManager.swift */; };
-		326C80D32797E09E007DDD0B /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D22797E09E007DDD0B /* LikeResponse.swift */; };
+		326C80D32797E09E007DDD0B /* LikeAndReserveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D22797E09E007DDD0B /* LikeAndReserveResponse.swift */; };
 		326C80D52797E653007DDD0B /* showLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326C80D42797E653007DDD0B /* showLikeList.swift */; };
 		3274064B278FCB7C00EAF9F9 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */; };
 		3274064D278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */; };
@@ -95,6 +98,9 @@
 		322256B2278A78410090A0DF /* Heart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heart.storyboard; sourceTree = "<group>"; };
 		322256B4278A784B0090A0DF /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		322256B6278A82B70090A0DF /* TabManController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManController.swift; sourceTree = "<group>"; };
+		3233786C2799A38400B8936A /* ReserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
+		323378702799A3DF00B8936A /* ReserveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveTableViewCell.swift; sourceTree = "<group>"; };
+		323378732799A7B700B8936A /* showMeReserveList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showMeReserveList.swift; sourceTree = "<group>"; };
 		32472083278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticIconCollectionViewCell.swift; sourceTree = "<group>"; };
 		32472085278D43FE009E4B8B /* DomesticCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomesticCollectionViewCell.swift; sourceTree = "<group>"; };
 		32472087278D7F52009E4B8B /* SIgnInPHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPHViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +148,7 @@
 		326C80C82797C2ED007DDD0B /* HeartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartViewController.swift; sourceTree = "<group>"; };
 		326C80CA2797C3D7007DDD0B /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
 		326C80D02797DF40007DDD0B /* LikeAndResponseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAndResponseDataManager.swift; sourceTree = "<group>"; };
-		326C80D22797E09E007DDD0B /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
+		326C80D22797E09E007DDD0B /* LikeAndReserveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAndReserveResponse.swift; sourceTree = "<group>"; };
 		326C80D42797E653007DDD0B /* showLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showLikeList.swift; sourceTree = "<group>"; };
 		3274064A278FCB7C00EAF9F9 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		3274064C278FCBAA00EAF9F9 /* LargeRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeRegionTableViewCell.swift; sourceTree = "<group>"; };
@@ -393,6 +399,8 @@
 			children = (
 				322256B4278A784B0090A0DF /* MyPage.storyboard */,
 				32472089278D8E24009E4B8B /* MyPageViewController.swift */,
+				3233786C2799A38400B8936A /* ReserveViewController.swift */,
+				323378702799A3DF00B8936A /* ReserveTableViewCell.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -506,8 +514,9 @@
 		326C80CD2797DF0F007DDD0B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				326C80D22797E09E007DDD0B /* LikeResponse.swift */,
+				326C80D22797E09E007DDD0B /* LikeAndReserveResponse.swift */,
 				326C80D42797E653007DDD0B /* showLikeList.swift */,
+				323378732799A7B700B8936A /* showMeReserveList.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -735,6 +744,8 @@
 				32472088278D7F52009E4B8B /* SIgnInPHViewController.swift in Sources */,
 				32685E67278976F8002389AF /* Date.swift in Sources */,
 				32472084278D43CA009E4B8B /* DomesticIconCollectionViewCell.swift in Sources */,
+				323378742799A7B700B8936A /* showMeReserveList.swift in Sources */,
+				3233786D2799A38400B8936A /* ReserveViewController.swift in Sources */,
 				32472086278D43FE009E4B8B /* DomesticCollectionViewCell.swift in Sources */,
 				32520705278C8B37008071FA /* RecommendIconCollectionViewCell.swift in Sources */,
 				32860ED6278ED423005356BB /* TransIconCollectionViewCell.swift in Sources */,
@@ -746,6 +757,7 @@
 				32DE3452278B347D00D2A055 /* SignInPWViewController.swift in Sources */,
 				32685E4527894AA3002389AF /* AppDelegate.swift in Sources */,
 				32520703278C89B9008071FA /* RecommendCollectionViewCell.swift in Sources */,
+				323378712799A3DF00B8936A /* ReserveTableViewCell.swift in Sources */,
 				324F82E3279446C500AD4739 /* timeSelectViewController.swift in Sources */,
 				324F82E5279446D400AD4739 /* timeReserveViewController.swift in Sources */,
 				32DDF8AD278A8401004C1280 /* EntertainmentViewController.swift in Sources */,
@@ -766,7 +778,7 @@
 				32685E932789EA60002389AF /* LoginDataManager.swift in Sources */,
 				3293C27B27903DD100F4F892 /* RegionResponse.swift in Sources */,
 				324F82DF27943E7200AD4739 /* RoomViewController.swift in Sources */,
-				326C80D32797E09E007DDD0B /* LikeResponse.swift in Sources */,
+				326C80D32797E09E007DDD0B /* LikeAndReserveResponse.swift in Sources */,
 				32685E69278976F8002389AF /* String.swift in Sources */,
 				32685E7927897757002389AF /* Constant.swift in Sources */,
 				32DDF8AB278A83EC004C1280 /* DomesticViewController.swift in Sources */,

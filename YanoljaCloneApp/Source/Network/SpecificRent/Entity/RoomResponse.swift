@@ -17,12 +17,13 @@ struct RoomResponse : Decodable {
 
 // MARK: - Result
 struct RoomResult : Decodable {
-    let roomImg: [String]
+    let roomImg: [String?]
     let roomInfo: RoomInfo
 }
 
 // MARK: - RoomInfo
 struct RoomInfo : Decodable {
+    let roomId : Int
     let roomName, roomMemo, minPersonnel, maxPersonnel: String
     let hotelName, timeUse, timeStart, timeEnd: String
     let timePrice, timeSale: String
