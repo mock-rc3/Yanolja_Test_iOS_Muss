@@ -93,7 +93,7 @@ extension sleepReserveViewController {
             self.dismissIndicator()
             self.presentAlert(title: result.message)
             
-            let home = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "home")
+            let home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
             self.changeRootViewController(home)
             
         } else {

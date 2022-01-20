@@ -60,16 +60,15 @@ class LoginDataManager : UIViewController {
     func sendKakaoInfo(auth : String, refresh : String) {
         let url = "http://\(Constant.BASE_URL)"
             + "/login/kakao"
+            + "?accessToken=" + auth
+            + "&refreshToken=" + refresh
         
-        let parameters : [String : String] = [
-            
-            "accessToken" : auth,
-            "refreshToken" : refresh
-        ]
+        print(url)
+        
         
         if let encoded = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded){
         
-            AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+            AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
                 .validate()
                 .responseDecodable(of: SignUpAndLogIn.self) { response in
                     switch response.result {

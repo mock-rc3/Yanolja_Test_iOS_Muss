@@ -112,17 +112,6 @@
                                             <backgroundConfiguration key="background" image="돋보기" imageContentMode="scaleAspectFit"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9a-Vc-PBr">
-                                        <rect key="frame" x="20" y="10" width="31" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="dKg-Gg-OHi"/>
-                                            <constraint firstAttribute="width" constant="31" id="fnQ-Pd-yOE"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" image="닫기" imageContentMode="scaleAspectFit"/>
-                                        </buttonConfiguration>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -130,8 +119,6 @@
                                     <constraint firstItem="rmZ-0z-PsR" firstAttribute="centerY" secondItem="6Px-CR-Dxx" secondAttribute="centerY" id="1Mx-3l-a0r"/>
                                     <constraint firstAttribute="height" constant="50" id="37J-o4-53v"/>
                                     <constraint firstAttribute="trailing" secondItem="lzy-iF-CqN" secondAttribute="trailing" constant="20" id="THE-TT-bzZ"/>
-                                    <constraint firstItem="D9a-Vc-PBr" firstAttribute="leading" secondItem="6Px-CR-Dxx" secondAttribute="leading" constant="20" id="Wge-Yh-YAC"/>
-                                    <constraint firstItem="rmZ-0z-PsR" firstAttribute="centerY" secondItem="D9a-Vc-PBr" secondAttribute="centerY" id="gfB-vk-znn"/>
                                     <constraint firstItem="lzy-iF-CqN" firstAttribute="centerY" secondItem="rmZ-0z-PsR" secondAttribute="centerY" id="qLU-H6-T7l"/>
                                 </constraints>
                             </view>
@@ -631,18 +618,12 @@
             <point key="canvasLocation" x="47.826086956521742" y="109.82142857142857"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="z44-gT-Sbb">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="IMG_6608-1" width="42" height="49"/>
         <image name="IMG_B4EED6C52BD8-1" width="41" height="43"/>
         <image name="IMG_B4EED6C52BD8-2" width="49" height="48"/>
         <image name="검은색장바구니" width="49" height="51"/>
         <image name="까만뒤로가기" width="30" height="45"/>
-        <image name="닫기" width="41" height="43"/>
         <image name="돋보기" width="49" height="48"/>
         <image name="지역 탭바" width="750" height="114"/>
         <image name="지역-상단탭바" width="750" height="167"/>

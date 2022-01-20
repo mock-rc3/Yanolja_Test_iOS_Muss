@@ -15,7 +15,6 @@ class RegionViewController : BaseViewController {
     var mainArea : Array<String> = []
     var subArea : Array<String> = []
     
-    var closeCheck : Bool = true
     
     @IBOutlet weak var LargeTableView: UITableView!
     @IBOutlet weak var SmallTableView: UITableView!
@@ -26,7 +25,6 @@ class RegionViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CloseViewBtn.isHidden = closeCheck
         self.navigationController?.navigationBar.isHidden = true
         
         self.LargeTableView.delegate = self
@@ -38,13 +36,9 @@ class RegionViewController : BaseViewController {
         self.dataManager.InquireRegion(delegate: self)
         self.showIndicator()
     }
-    
-    @IBAction func CloseView(_ sender: Any) {
-        closeCheck = false
-        self.dismiss(animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
-    
-    
     
 }
 

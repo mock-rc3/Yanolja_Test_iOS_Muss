@@ -26,7 +26,7 @@ struct ReserveResult: Codable {
     let hotelName, roomName: String
     let imgURL: String
     let bookingStartDate, bookingEndDate: String
-    let bookingStartTime, bookingEndTime, day, time: String
+    let bookingStartTime, bookingEndTime, day, time: String?
 
     enum CodingKeys: String, CodingKey {
         case roomBookingID = "room_booking_id"

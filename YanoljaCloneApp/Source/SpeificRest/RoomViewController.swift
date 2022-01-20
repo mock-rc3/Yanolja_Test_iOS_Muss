@@ -153,7 +153,7 @@ extension RoomViewController {
             self.roomLimit.text = "기준 인원 \(result.result.roomInfo.minPersonnel)명 (최대\(result.result.roomInfo.maxPersonnel)명)"
             self.hotelName.text = result.result.roomInfo.hotelName
             
-            if let img = result.result.roomImg[1]{
+            if let img = result.result.roomImg[0]{
                 if let url = URL(string: img) {
                     let data = try? Data(contentsOf: url)
                     self.roomImg.image = UIImage(data: data!)

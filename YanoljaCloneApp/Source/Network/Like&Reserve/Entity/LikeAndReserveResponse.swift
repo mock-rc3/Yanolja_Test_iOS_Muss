@@ -40,3 +40,14 @@ struct RoomReserveResult : Decodable{
     let id: Int
 }
 
+
+// MARK: - Welcome
+struct DeleteReserveResponse : Decodable {
+    let isSuccess: Bool
+    let code: Int
+    let message, result: String
+}
+
+
+
+

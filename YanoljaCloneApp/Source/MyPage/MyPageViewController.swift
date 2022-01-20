@@ -17,4 +17,12 @@ class MyPageViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    @IBAction func NextView(_ sender: Any) {
+        let RVC = self.storyboard?.instantiateViewController(withIdentifier: "reserveView")
+        
+        self.navigationController?.pushViewController(RVC!, animated: true)
+    }
+    
 }

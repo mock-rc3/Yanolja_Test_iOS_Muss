@@ -78,7 +78,6 @@ class RestListViewController : BaseViewController {
         
         RVC.modalPresentationStyle = .overFullScreen
         RVC.modalTransitionStyle = .coverVertical
-        RVC.closeCheck = false
         
         self.present(RVC, animated: true)
     }
