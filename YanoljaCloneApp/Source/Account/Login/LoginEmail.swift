@@ -76,9 +76,12 @@ extension LoginEmailView {
         if result.isSuccess{
             
             self.dismissIndicator()
-            let MyPage = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "mypage") as! MyPageViewController
-            MyPage.id = result.result.id
-            MyPage.jwt = result.result.jwt
+            let MyPage = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+//            MyPage.id = result.result.id
+//            MyPage.jwt = result.result.jwt
+            
+            Constant.user_id = result.result.id
+            Constant.jwt = result.result.jwt
             
             self.changeRootViewController(MyPage)
             

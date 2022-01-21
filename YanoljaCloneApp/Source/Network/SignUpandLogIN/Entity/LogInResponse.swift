@@ -30,7 +30,7 @@ struct SignUpAndLogIn : Decodable {
 }
 
 struct Token : Decodable {
-    var id : String
+    var id : Int
     var jwt : String
 }
 

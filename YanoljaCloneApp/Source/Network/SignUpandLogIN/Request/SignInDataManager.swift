@@ -37,8 +37,8 @@ class SignInDataManeger : UIViewController {
             + "/auth/email-confirm"
         
         let parameters : [String : String] = [
-            "authNumber" : authNum,
-            "authMethod" : email
+            "authMethod" : email,
+            "authNumber" : authNum
         ]
         
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
@@ -46,6 +46,7 @@ class SignInDataManeger : UIViewController {
             .responseDecodable(of: AuthNumResponse.self) { response in
                 switch response.result {
                 case .success(let response):
+                    print("authNum success")
                     delegate.didRetrieveEmailAuthNum(result: response)
                 case .failure(let error):
                     print(error)

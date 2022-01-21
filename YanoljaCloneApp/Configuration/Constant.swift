@@ -11,7 +11,7 @@ struct Constant {
     
     static let ud = UserDefaults.standard
     static let BASE_URL = "jwyang.shop:8080"
-    static var user_id = ""
+    static var user_id = 0
     static var jwt = ""
     static var likeId = 0
     

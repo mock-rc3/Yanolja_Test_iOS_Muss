@@ -111,7 +111,7 @@
 		324F82E2279446C500AD4739 /* timeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeSelectViewController.swift; sourceTree = "<group>"; };
 		324F82E4279446D400AD4739 /* timeReserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeReserveViewController.swift; sourceTree = "<group>"; };
 		324F82E6279446E200AD4739 /* sleepReserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepReserveViewController.swift; sourceTree = "<group>"; };
-		325206FD278C3AD0008071FA /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
+		325206FD278C3AD0008071FA /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; tabWidth = 5; };
 		325206FF278C3BE8008071FA /* LogInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponse.swift; sourceTree = "<group>"; };
 		32520702278C89B9008071FA /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		32520704278C8B37008071FA /* RecommendIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendIconCollectionViewCell.swift; sourceTree = "<group>"; };

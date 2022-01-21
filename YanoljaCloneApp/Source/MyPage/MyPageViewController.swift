@@ -9,7 +9,7 @@ import Foundation
 
 class MyPageViewController : BaseViewController {
     
-    var id : String = ""
+    var id : Int = 0
     var jwt : String = ""
     
 

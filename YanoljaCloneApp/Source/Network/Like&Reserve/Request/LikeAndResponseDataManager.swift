@@ -96,7 +96,7 @@ class LikeAndReserveDataManager : UIViewController {
                 + "/booking/time"
         
         let body : [String : Any] = [
-            "user_id" : 1,
+            "user_id" : Constant.user_id,
             "hotel_id" : hotel_id,
             "room_id" : room_id,
             "booking_type" : "T",
@@ -129,7 +129,7 @@ class LikeAndReserveDataManager : UIViewController {
                 + "/booking/sleep"
         
         let body : [String : Any] = [
-            "user_id" : 1,
+            "user_id" : Constant.user_id,
             "hotel_id" : hotel_id,
             "room_id" : room_id,
             "booking_type" : "T",
@@ -156,10 +156,10 @@ class LikeAndReserveDataManager : UIViewController {
     
     func showMeReserveList(delegate : ReserveViewController) {
         let url = "http://\(Constant.BASE_URL)"
-        + "/booking/1"
+        + "/booking/\(Constant.user_id)"
         
         let header : HTTPHeaders = [
-            "X-AUTH-TOKEN" : "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjEsImlhdCI6MTY0MjU3MDQ0NSwiZXhwIjoxNjQ0MDQxNjc0fQ.xmc-Ab2GOovrgaB6ML7e-1wyFKowkcP5_pAy2rxcHTU"
+            "X-AUTH-TOKEN" : Constant.jwt
         ]
         
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
